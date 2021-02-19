@@ -73,34 +73,56 @@
                         <script>
                         
                        
-                        function isOK(origin, destination)
+                        function originInput()
                         {
-                            if ((document.getElementById(origin).value.length==0) ||
-								(document.getElementById(origin).value==null)) {
-								alert("Please input your  origin.");
-								return false;
-						}
-							if ((document.getElementById(destination).value.length==0) ||
-								(document.getElementById(destination).value==null)) {
-								alert("Please input your destination.");
-								return false;
-						}
-                             return true;
+                            var orig;
+                            var origin=prompt("Enter your origin: ");
+                            
+                            if(origin!=null)
+                            {
+                                orig="You entered: "+ origin +".";
+                               document.getElementById("origin_output").innerHTML=orig;
+                                
+                            }
+                             
                         }
-                 
+                       
+                            
+                        function destInput()
+                        {
+                            var desty;
+                            var destination = prompt("Enter your destination: ")
+                            
+                            if(destination!=null)
+                            {
+                                desty="You entered: "+ destination +".";
+                                document.getElementById("dest_output").innerHTML=desty;
+                               
+                            }
+                        }
+                        function saveToFile()
+                        {
+                            var destout = document.getElementById("dest_output").value;
+                            var blob = new Blob([destout])
+                            {type: "text/plain;charset=utf-8"});
+                            saveAs(blob, "input.txt");
+                        }
+                        
+                        
                         </script>
-                         <form action = "test.php" enctype="multipart/form-data" method="post" onsubmit="javascript:return isOK('origin', 'destination')">
+                         <form action = "">
                             <fieldset>
                                 <label> Enter Origin: </label><br>
                                 <input type="text"
-                                       name = "origin" /><br><br>
-								<br>
-                                <label> Enter Destination: </label><br>
+                                       id = "originName" /><br><br>
+                                <label> You entered: </label><br>
                                 <input type = "text"
-                                       name = "destination" />
+                                       id = "origOutput" />
                              </fieldset>
-						<br>
-						<input type="submit" value="Submit" class = "btn btn-primary" style="background-color:cadetblue">
+                        <br>
+                        <a onclick="originInput()" class="btn btn-primary" style="background-color:cadetblue" \>Enter Origin: </a><br><br>
+			            <a onclick="destInput()" class="btn btn-primary" style="background-color:cadetblue" \>Enter Destination: </a>
+                        <a onclick="saveInput()" class="btn btn-primary" style="background-color:cadetblue" \>Save to file </a><br><br>
                         <hr class="mb-5">
                    </section>
                </main>
