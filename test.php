@@ -69,29 +69,58 @@ https://templatemo.com/tm-550-diagoona
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
-                        <h2 class="mb-5 tm-content-title">Planning Your Trip</h2>
-                        First Name:
-                        <input  type="text"
-                                id="fName">
-                        <br>
-                        Last Name:
-                        <input  type="text"
-                                id="lName">
-                        <br>
-                        
-                        <script>
-                            function myFunction() 
-                            {
-                                var first = document.getElementById("fName").value;    
-                                var last = document.getElementById("lName").value;
-                                
-                                localStorage.setItem('first', first);
-                                localStorage.setItem('last', last);
-                            }
-                        </script>
-                        <br>
-			
-			<a href="tripplanner2.html" class="btn btn-primary" style="background-color:cadetblue" onclick="myFunction()" \>Continue</a>
+                        <h2 class="mb-5 tm-content-title">Results</h2>
+                        <?php
+
+
+	$txtFile = "inputdata.txt";
+	$isFile = is_file($txtFile);
+
+  $file = fopen ($txtFile, "a+");
+  if (fseek($file, 0, SEEK_END)!=-1){
+//    if (!$isFile){
+//    	fputs($file, "Name\tProjectName\tMotivation\tFunctionalities\tImplementation\tPotentialUsers\tSupplementary\n");
+//    }
+
+
+    fputs($file, $_POST["origin"]);
+    fputs($file, "\t");
+
+    fputs($file, $_POST["destination"]);
+    fputs($file, "\t");
+
+    /*$originalmotivation = $_POST["motivation"];
+    $newmotivation = str_replace("\r\n", "\&", $originalmotivation);
+    fputs($file, "$newmotivation\t");
+
+
+    $originalfunctionalities = $_POST["functionalities"];
+    $newfunctionalities = str_replace("\r\n", "\&", $originalfunctionalities);
+    fputs($file, "$newfunctionalities\t");
+
+
+    $originalimplement = $_POST["implement"];
+    $newimplement = str_replace("\r\n", "\&", $originalimplement);
+    fputs($file, "$newimplement\t");
+
+
+    $originalpotentialusers = $_POST["potentialusers"];
+    $newpotentialusers = str_replace("\r\n", "\&", $originalpotentialusers);
+    fputs($file, "$newpotentialusers\t");
+
+
+    $originalsupplementary = $_POST["supplementary"];
+    $newsupplementary = str_replace("\r\n", "\&", $originalsupplementary);
+    fputs($file, "$newsupplementary\n");*/
+
+  }
+  if ($file)
+	fclose($file);
+    
+
+
+   echo file_get_contents($txtFile);
+   ?>
                         <hr class="mb-5">
                    </section>
                </main>
