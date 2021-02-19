@@ -71,8 +71,24 @@ https://templatemo.com/tm-550-diagoona
                     <section class="tm-content tm-about">
                         <div class="entered_data" id="entered_data_page">Entered Data</div>
 						<div class ="flightprices"></div>
-                        <script src="min.js"></script>
+                        <script src="min.js"></script>                        
+			    First Name: 
+                                <output type="text"
+                                        id="pos1">
+                                </output>
+                                <br>
+                                Last Name: 
+                                <output type="text"
+                                        id="pos2">
+                                </output>
+                            <br>
                         
+						  <script>
+                            document.getElementById("pos1").textContent = localStorage.getItem("first");
+                            document.getElementById("pos2").textContent = localStorage.getItem("last");
+                              
+                            localStorage.clear();
+                          </script>    
                         <hr class="mb-5">
                    </section>
                </main>
