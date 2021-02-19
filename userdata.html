@@ -81,13 +81,24 @@ https://templatemo.com/tm-550-diagoona
                                 <output type="text"
                                         id="pos2">
                                 </output>
+			    Origin: 
+                                <output type="text"
+                                        id="pos3">
+                                </output>
+                                <br>
+                            Destination: 
+                                <output type="text"
+                                        id="pos4">
+                                </output>
                             <br>
                         
 			  <script>
                             document.getElementById("pos1").textContent = localStorage.getItem("first");
                             document.getElementById("pos2").textContent = localStorage.getItem("last");
+			    document.getElementById("pos3").textContent = localStorage.getItem("orig");
+                            document.getElementById("pos4").textContent = localStorage.getItem("dest");
                               
-                            localStorage.clear();
+                            
                           </script>    
                         <hr class="mb-5">
                    </section>
