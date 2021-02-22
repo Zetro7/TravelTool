@@ -8,7 +8,7 @@ fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices
 .then(response => response.json())
 .then(response => {
 	console.log(response);
-    console.log(response.Carriers);
+    console.log(response.quotes);
 })
 .catch(err => {
 	console.error(err);
