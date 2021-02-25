@@ -88,7 +88,7 @@ https://templatemo.com/tm-550-diagoona
                         <br>
                         
 			Airport:
-			<input list="Airports" type="text">
+			<input type="text" list="Airports" name="getAir">
 				        
                         <datalist id = "Airports">
                             <option value="Aberdeen, SD (ABR)"/>
@@ -706,11 +706,13 @@ https://templatemo.com/tm-550-diagoona
                                 var last = document.getElementById("lName").value;
 				var orig = document.getElementById("Origin").value;
 				var dest = document.getElementById("Destination").value;
+				var air = document.getElementByName('getAir')[0];
                                 
                                 localStorage.setItem('first', first);
                                 localStorage.setItem('last', last);
 				localStorage.setItem('orig', orig);
 				localStorage.setItem('dest', dest);
+				localStorage.setItem('air', air);
                             }
                         </script>
                         <br>
