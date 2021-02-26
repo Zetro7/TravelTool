@@ -72,7 +72,7 @@ https://templatemo.com/tm-550-diagoona
                         <div class="entered_data" id="entered_data_page">Entered Data</div>
 						<div class ="flightprices"></div>
                         <script src="main.js"></script>                        
-			    First Name: 
+			                    First Name: 
                                 <output type="text"
                                         id="pos1">
                                 </output>
@@ -81,26 +81,33 @@ https://templatemo.com/tm-550-diagoona
                                 <output type="text"
                                         id="pos2">
                                 </output>
-			    	<br>
-			    Origin: 
+			    	            <br>
+                                Origin: 
                                 <output type="text"
                                         id="pos3">
                                 </output>
                                 <br>
-                            Destination: 
+                                Destination: 
                                 <output type="text"
                                         id="pos4">
                                 </output>
-                            <br>
+                                <br>
+                                Airport:
+                                <output type="text"
+                                        id="pos5">
+                                </output>
+                                <br>
                         
-			  <script>
-                            document.getElementById("pos1").textContent = localStorage.getItem("first");
-                            document.getElementById("pos2").textContent = localStorage.getItem("last");
-			    document.getElementById("pos3").textContent = localStorage.getItem("orig");
-                            document.getElementById("pos4").textContent = localStorage.getItem("dest");
-                              
+			    <script>
+				    document.getElementById("pos1").textContent = localStorage.getItem("first");
+				    document.getElementById("pos2").textContent = localStorage.getItem("last");
+				    document.getElementById("pos3").textContent = localStorage.getItem("orig");
+				    document.getElementById("pos4").textContent = localStorage.getItem("dest");
+				    document.getElementById("pos5").textContent = localStorage.getItem("air");
                             
-                          </script>    
+                            </script>  
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMZlqsl7P2r1cb-Dv3-oFN7teR7bf2U5Y"></script>
+                        <script src="distanceMatrix.js"></script>
                         <hr class="mb-5">
                    </section>
                </main>
