@@ -13,9 +13,19 @@ function callback(response, status){
         console.log(duration);
     }
 }
+//fname=Jacob&lname=Johnson&origin=Pittsburgh&destination=Miami&originAir=Pittsburgh%2C+PA+%28PIT%29&destAir=Miami%2C+FL+-+International+%28MIA%29
+var userData = window.location.search;
+//This section parses the userdata string to pull out origin and destination
+var splitNames = userData.split("=");
+console.log(splitNames);
+var originSplit = splitNames[3].split("&");
+var destSplit = splitNames[4].split("&");
 
-var origin = "Pittsburgh";
-var destination = "Cleveland";
+//These variables are now user defined and sent to the API
+var origin = originSplit[0];
+var destination = destSplit[0];
+
+console.log(window.location.search);
 
 var service = new google.maps.DistanceMatrixService();
 service.getDistanceMatrix(
