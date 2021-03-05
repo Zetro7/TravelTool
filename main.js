@@ -7,17 +7,18 @@ var originSplit1 = splitData[5].split("%28");
 var destSplit1 = splitData[6].split("%28");
 var originSplit2 = originSplit1[1].split("%");
 var destSplit2 = destSplit1[1].split("%");
+var departSplit = splitData[7].split("&");
+var depart = departSplit[0];
+var arrive = splitData[8];
 
 
 
 var url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/";
 var origin = originSplit2[0].concat("-sky");
 var dest = destSplit2[0].concat("-sky");
-var outbound = "2021-03-01";
-var inbound = "2021-03-04";
+var outbound = depart;
+var inbound = arrive;
 var urlex = "?inboundpartialdate=";
-console.log(origin);
-console.log(dest);
 
 var urlFinal = url.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex.concat(inbound)))))));
 
@@ -33,7 +34,11 @@ fetch(urlFinal, {
 .then(response => response.json())
 .then(response => {
 	console.log(response);
-    console.log(response.quotes);
+    console.log(response.Quotes[0].MinPrice);
+    var price = response.Quotes[0].MinPrice;
+    var airline = response.Carriers[0].Name;
+    document.getElementById("price").innerHTML = price;
+    document.getElementById("airline").innerHTML = airline;
 })
 .catch(err => {
 	console.error(err);
