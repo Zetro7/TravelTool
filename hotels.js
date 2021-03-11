@@ -7,7 +7,7 @@ fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&page
 })
 .then(response => {
 	console.log(response);
-.then(response => response.json());
+    console.log(response.json());
 })
 .catch(err => {
 	console.error(err);
