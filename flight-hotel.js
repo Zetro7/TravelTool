@@ -1,11 +1,13 @@
 //This section parses the userdata string to pull out origin and destination
 var userData = window.location.search;
+var initGoogleURL = "https://www.google.com/search?q=";
 var splitNames = userData.split("=");
-console.log(splitNames);
+//console.log(splitNames);
 var originSplit = splitNames[1].split("&");
 var destSplit = splitNames[2].split("&");
 var departSplit = splitNames[3].split("&");
 var returnSplit = splitNames[4].split("&");
+//var cityOnlySplit = splitNames[5].split("-");
 
 //These variables are now user defined and sent to the API
 //https://hotels4.p.rapidapi.com/locations/search?query=new%20york&locale=en_US
@@ -13,9 +15,11 @@ var origin = originSplit[0];
 var dest = destSplit[0];
 var departDate = departSplit[0];
 var returnDate = returnSplit[0];
+//var cityOnly = cityOnlySplit[0];
+//console.log(cityOnly);
 var hotelLocationURL = "https://hotels4.p.rapidapi.com/locations/search?query=";
 var finalHotelLocationURL = hotelLocationURL.concat(dest).concat("&locale=en_US");
-console.log(finalHotelLocationURL);
+//console.log(finalHotelLocationURL);
 
 fetch(finalHotelLocationURL, {
 	"method": "GET",
@@ -32,7 +36,7 @@ fetch(finalHotelLocationURL, {
     console.log(destinationID);
     ///////////////////////////////////////////////////////////////////////
     var userData = window.location.search;
-    console.log(userData);
+    //console.log(userData);
 
 var hotelDataURL = "https://hotels4.p.rapidapi.com/properties/list?destinationId=";
 var finalHotelDataURL = hotelDataURL.concat(destinationID).concat("&pageNumber=1&").concat("checkIn=").concat(departDate).concat("&").concat(returnDate).concat("&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE");
@@ -70,6 +74,11 @@ fetch(finalHotelDataURL, {
     var table = document.getElementById("hotelTable");
     
     for(var n = 0; n < hotelCount/10; n++){
+        
+    
+        var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
+        var googleHyperLink = "Book Here";
+        temp5 = googleHyperLink.link(finalGoogleURL);
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
          temp3 = response.data.body.searchResults.results[n].starRating;
@@ -86,11 +95,13 @@ fetch(finalHotelDataURL, {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
     
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
+        cell5.innerHTML = temp5;
      
         
     }
