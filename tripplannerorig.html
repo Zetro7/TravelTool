@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Tool - Weekly Updates</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="css/templatemo-diagoona.css" rel="stylesheet" />
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/trave-diary.png">
+<!--
+
+TemplateMo 550 Diagoona
+
+https://templatemo.com/tm-550-diagoona
+
+-->
+</head>
+
+<body>
+    <div class="tm-container">        
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">Travel Tool</h1>
+                            <p class="tm-slogon">A Travel Planning Tool</p>
+                        </div>        
+                    </div>
+                </div>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" 
+                            data-toggle="collapse" data-target="#navbar-nav" 
+                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="weeklyupdates.html">Weekly Updates</a>
+                                </li>                            
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="documentation.html">Documentation</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="team.html">Meet the Team</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="tripplanner.html">Plan Your Trip <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>                            
+                        </div>                        
+                    </nav>
+                </div>
+            </div>
+            <div class="tm-row">
+                <div class="tm-col-left"></div>
+                <main class="tm-col-right">
+                    <section class="tm-content tm-about">
+                        <h2 class="mb-6 tm-content-title">Planning Your Trip</h2>
+                        <form action="flyinginfo.html" method="GET">
+                        <hr class="mb-3">
+                      <h2 class="mb-6 tm-content-title">Flying Information</h2>  
+                        Departure Airport:
+                        <input type="text" list="Airports" name="originAir"><br>
+                        Destination Airport:
+                        <input type="text" list="Airports" name="destAir">
+				        
+                        <datalist id = "Airports">
+                            <option value="Aberdeen, SD (ABR)"/>
+                            <option value="Abilene, TX (ABI)"/>
+                            <option value="Adak Island, AK (ADK)"/>
+                            <option value="Akiachak, AK (KKI)"/>
+                            <option value="Akiak, AK (AKI)"/>
+                            <option value="Akron/Canton, OH (CAK)"/>
+                            <option value="Akuton, AK (KQA)"/>
+                            <option value="Alakanuk, AK (AUK)"/>
+                            <option value="Alamogordo, NM (ALM)"/>
+                            <option value="Alamosa, CO (ALS)"/>
+                            <option value="Albany, NY (ALB)"/>
+                            <option value="Albany, OR - Bus service (CVO)"/>
+                            <option value="Albany, OR - Bus service (QWY)"/>
+                            <option value="Albuquerque, NM (ABQ)"/>
+                            <option value="Aleknagik, AK (WKK)"/>
+                            <option value="Alexandria, LA (AEX)"/>
+                            <option value="Allakaket, AK (AET)"/>
+                            <option value="Allentown, PA (ABE)"/>
+                            <option value="Alliance, NE (AIA)"/>
+                            <option value="Alpena, MI (APN)"/>
+                            <option value="Altoona, PA (AOO)"/>
+                            <option value="Amarillo, TX (AMA)"/>
+                            <option value="Ambler, AK (ABL)"/>
+                            <option value="Anaktueuk, AK (AKP)"/>
+                            <option value="Anchorage, AK (ANC)"/>
+                            <option value="Angoon, AK (AGN)"/>
+                            <option value="Aniak, AK (ANI)"/>
+                            <option value="Anvik, AK (ANV)"/>
+                            <option value="Appleton, WI (ATW)"/>
+                            <option value="Arcata, CA (ACV)"/>
+                            <option value="Arctic Village, AK (ARC)"/>
+                            <option value="Asheville, NC (AVL)"/>
+                            <option value="Ashland, KY/Huntington, WV (HTS)"/>
+                            <option value="Aspen, CO (ASE)"/>
+                            <option value="Athens, GA (AHN)"/>
+                            <option value="Atka, AK (AKB)"/>
+                            <option value="Atlanta, GA (ATL)"/>
+                            <option value="Atlantic City, NJ (AIY)"/>
+                            <option value="Atqasuk, AK (ATK)"/>
+                            <option value="Augusta, GA (AGS)"/>
+                            <option value="Augusta, ME (AUG)"/>
+                            <option value="Austin, TX (AUS)"/>
+                            <option value="Bakersfield, CA (BFL)"/>
+                            <option value="Baltimore, MD (BWI)"/>
+                            <option value="Bangor, ME (BGR)"/>
+                            <option value="Bar Harbour, ME (BHB)"/>
+                            <option value="Barrow, AK (BRW)"/>
+                            <option value="Barter Island, AK (BTI)"/>
+                            <option value="Baton Rouge, LA (BTR)"/>
+                            <option value="Bay City, MI (MBS)"/>
+                            <option value="Beaumont/Port Arthur, TX (BPT)"/>
+                            <option value="Beaver Creek, CO - Van service (ZBV)"/>
+                            <option value="Beaver, AK (WBQ)"/>
+                            <option value="Beckley, WV (BKW)"/>
+                            <option value="Bedford, MA (BED)"/>
+                            <option value="Belleville, IL (BLV)"/>
+                            <option value="Bellingham, WA (BLI)"/>
+                            <option value="Bemidji, MN (BJI)"/>
+                            <option value="Benton Harbor, MI (BEH)"/>
+                            <option value="Bethel, AK (BET)"/>
+                            <option value="Bethlehem, PA (ABE)"/>
+                            <option value="Bettles, AK (BTT)"/>
+                            <option value="Billings, MT (BIL)"/>
+                            <option value="Biloxi/Gulfport, MS (GPT)"/>
+                            <option value="Binghamton, NY (BGM)"/>
+                            <option value="Birch Creek, AK (KBC)"/>
+                            <option value="Birmingham, AL (BHM)"/>
+                            <option value="Bismarck, ND (BIS)"/>
+                            <option value="Block Island, RI (BID)"/>
+                            <option value="Bloomington, IL (BMI)"/>
+                            <option value="Bluefield, WV (BLF)"/>
+                            <option value="Boise, ID (BOI)"/>
+                            <option value="Boston, MA (BOS)"/>
+                            <option value="Boulder, CO - Bus service (XHH)"/>
+                            <option value="Boulder, CO - Hiltons Har H (WHH)"/>
+                            <option value="Boulder, CO - Municipal Airport (WBU)"/>
+                            <option value="Boundary, AK (BYA)"/>
+                            <option value="Bowling Green, KY (BWG)"/>
+                            <option value="Bozeman, MT (BZN)"/>
+                            <option value="Bradford, PA (BFD)"/>
+                            <option value="Brainerd, MN (BRD)"/>
+                            <option value="Brawnwood, TX (BWD)"/>
+                            <option value="Breckenridge, CO - Van service (QKB)"/>
+                            <option value="Bristol, VA (TRI)"/>
+                            <option value="Brookings, SD (BKX)"/>
+                            <option value="Brooks Lodge, AK (RBH)"/>
+                            <option value="Brownsville, TX (BRO)"/>
+                            <option value="Brunswick, GA (BQK)"/>
+                            <option value="Buckland, AK (BKC)"/>
+                            <option value="Buffalo, NY (BUF)"/>
+                            <option value="Bullhead City/Laughlin, AZ (IFP)"/>
+                            <option value="Burbank, CA (BUR)"/>
+                            <option value="Burlington, IA (BRL)"/>
+                            <option value="Burlington, VT (BTV)"/>
+                            <option value="Butte, MT (BTM)"/>
+                            <option value="Canton/Akron, OH (CAK)"/>
+                            <option value="Cape Girardeau, MO (CGI)"/>
+                            <option value="Cape Lisburne, AK (LUR)"/>
+                            <option value="Cape Newenham, AK (EHM)"/>
+                            <option value="Carbondale, IL (MDH)"/>
+                            <option value="Carlsbad, CA (CLD)"/>
+                            <option value="Carlsbad, NM (CNM)"/>
+                            <option value="Carmel, CA (MRY)"/>
+                            <option value="Casper, WY (CPR)"/>
+                            <option value="Cedar City, UT (CDC)"/>
+                            <option value="Cedar Rapids, IA (CID)"/>
+                            <option value="Central, AK (CEM)"/>
+                            <option value="Chadron, NE (CDR)"/>
+                            <option value="Chalkyitsik, AK (CIK)"/>
+                            <option value="Champaign/Urbana, IL (CMI)"/>
+                            <option value="Charleston, SC (CHS)"/>
+                            <option value="Charleston, WV (CRW)"/>
+                            <option value="Charlotte, NC (CLT)"/>
+                            <option value="Charlottesville, VA (CHO)"/>
+                            <option value="Chattanooga, TN (CHA)"/>
+                            <option value="Chefornak, AK (CYF)"/>
+                            <option value="Chevak, AK (VAK)"/>
+                            <option value="Cheyenne, WY (CYS)"/>
+                            <option value="Chicago, IL - All airports (CHI)"/>
+                            <option value="Chicago, IL - Midway (MDW)"/>
+                            <option value="Chicago, IL - O'Hare (ORD)"/>
+                            <option value="Chicken, AK (CKX)"/>
+                            <option value="Chico, CA (CIC)"/>
+                            <option value="Chignik, AK - Fisheries (KCG)"/>
+                            <option value="Chignik, AK - (KCQ)"/>
+                            <option value="Chignik, AK - Lagoon (KCL)"/>
+                            <option value="Chisana, AK (CZN)"/>
+                            <option value="Chisholm/Hibbing, MN (HIB)"/>
+                            <option value="Chuathbaluk, AK (CHU)"/>
+                            <option value="Cincinnati, OH (CVG)"/>
+                            <option value="Circle Hot Springs, AK (CHP)"/>
+                            <option value="Circle, AK (IRC)"/>
+                            <option value="Clarks Point, AK (CLP)"/>
+                            <option value="Clarksburg, WV (CKB)"/>
+                            <option value="Clearwater/St Petersburg, FL (PIE)"/>
+                            <option value="Cleveland, OH (CLE)"/>
+                            <option value="Clovis, NM (CVN)"/>
+                            <option value="Cody/Yellowstone, WY (COD)"/>
+                            <option value="Coffee Point, AK (CFA)"/>
+                            <option value="Coffman Cove, AK (KCC)"/>
+                            <option value="Cold Bay, AK (CDB)"/>
+                            <option value="College Station, TX (CLL)"/>
+                            <option value="Colorado Springs, CO (COS)"/>
+                            <option value="Columbia, MO (COU)"/>
+                            <option value="Columbia, SC (CAE)"/>
+                            <option value="Columbus, GA (CSG)"/>
+                            <option value="Columbus, MS (GTR)"/>
+                            <option value="Columbus, OH (CMH)"/>
+                            <option value="Concord, CA (CCR)"/>
+                            <option value="Concordia, KS (CNK)"/>
+                            <option value="Copper Mountain, CO - Van service (QCE)"/>
+                            <option value="Cordova, AK (CDV)"/>
+                            <option value="Corpus Christi, TX (CRP)"/>
+                            <option value="Cortez, CO (CEZ)"/>
+                            <option value="Craig, AK (CGA)"/>
+                            <option value="Crescent City, CA (CEC)"/>
+                            <option value="Crooked Creek, AK (CKO)"/>
+                            <option value="Cube Cove, AK (CUW)"/>
+                            <option value="Cumberland, MD (CBE)"/>
+                            <option value="Dallas, TX - Love Field (DAL)"/>
+                            <option value="Dallas, TX - Dallas/Ft Worth Intl. (DFW)"/>
+                            <option value="Dayton, OH (DAY)"/>
+                            <option value="Daytona Beach, FL (DAB)"/>
+                            <option value="Decatur, IL (DEC)"/>
+                            <option value="Deering, AK (DRG)"/>
+                            <option value="Del Reo, TX (DRT)"/>
+                            <option value="Delta Junction, AK (DJN)"/>
+                            <option value="Denver, CO - International (DEN)"/>
+                            <option value="Denver, CO - Longmont Bus service (QWM)"/>
+                            <option value="Des Moines, IA (DSM)"/>
+                            <option value="Detroit, MI - All airports (DTT)"/>
+                            <option value="Detroit, MI - Metro/Wayne County (DTW)"/>
+                            <option value="Devil's Lake, ND (DVL)"/>
+                            <option value="Dickinson, ND (DIK)"/>
+                            <option value="Dillingham, AK (DLG)"/>
+                            <option value="Dodge City, KS (DDC)"/>
+                            <option value="Dothan, AL (DHN)"/>
+                            <option value="Dubois, PA (DUJ)"/>
+                            <option value="Dubuque, IA (DBQ)"/>
+                            <option value="Duluth, MN (DLH)"/>
+                            <option value="Durango, CO (DRO)"/>
+                            <option value="Durham, NC (RDU)"/>
+                            <option value="Durham/Raleigh, NC (RDU)"/>
+                            <option value="Dutch Harbor, AK (DUT)"/>
+                            <option value="Easton, PA (ABE)"/>
+                            <option value="Eau Claire, WI (EAU)"/>
+                            <option value="Edna Bay, AK (EDA)"/>
+                            <option value="Eek, AK (EEK)"/>
+                            <option value="Ekuk, AK (KKU)"/>
+                            <option value="Ekwok, AK (KEK)"/>
+                            <option value="El Centro, CA (IPL)"/>
+                            <option value="El Dorado, AR (ELD)"/>
+                            <option value="El Paso, TX (ELP)"/>
+                            <option value="Elfin Cove, AK (ELV)"/>
+                            <option value="Elim, AK (ELI)"/>
+                            <option value="Elko, NV (EKO)"/>
+                            <option value="Elmira, NY (ELM)"/>
+                            <option value="Ely, MN (LYU)"/>
+                            <option value="Emmonak, AK (EMK)"/>
+                            <option value="Endicott, NY (BGM)"/>
+                            <option value="Enid, OK (WDG)"/>
+                            <option value="Erie, PA (ERI)"/>
+                            <option value="Escanaba, MI (ESC)"/>
+                            <option value="Eugene, OR (EUG)"/>
+                            <option value="Eureka/Arcata, CA (ACV)"/>
+                            <option value="Eureka, NV (EUE)"/>
+                            <option value="Evansville, IN (EVV)"/>
+                            <option value="Fairbanks, AK (FAI)"/>
+                            <option value="Fargo, ND (FAR)"/>
+                            <option value="Farmington, NM (FMN)"/>
+                            <option value="Fayetteville, AR - Municipal/Drake (FYV)"/>
+                            <option value="Fayetteville, AR - Northwest Arkansas Regional (XNA)"/>
+                            <option value="Fayetteville, NC (FAY)"/>
+                            <option value="Flagstaff, AZ (FLG)"/>
+                            <option value="Flint, MI (FNT)"/>
+                            <option value="Florence, SC (FLO)"/>
+                            <option value="Florence/Muscle Shoals/Sheffield, AL (MSL)"/>
+                            <option value="Fort Collins/Loveland, CO - Municipal Airport (FNL)"/>
+                            <option value="Fort Collins/Loveland, CO - Bus service (QWF)"/>
+                            <option value="Fort Dodge, IA (FOD)"/>
+                            <option value="Fort Lauderdale, FL (FLL)"/>
+                            <option value="Fort Leonard Wood, MO (TBN)"/>
+                            <option value="Fort Myers, FL (RSW)"/>
+                            <option value="Fort Smith, AR (FSM)"/>
+                            <option value="Fort Walton Beach, FL (VPS)"/>
+                            <option value="Fort Wayne, IN (FWA)"/>
+                            <option value="Fort Worth/Dallas, TX (DFW)"/>
+                            <option value="Franklin, PA (FKL)"/>
+                            <option value="Fresno, CA (FAT)"/>
+                            <option value="Gainesville, FL (GNV)"/>
+                            <option value="Gallup, NM (GUP)"/>
+                            <option value="Garden City, KS (GCK)"/>
+                            <option value="Gary, IN (GYY)"/>
+                            <option value="Gillette, WY (GCC)"/>
+                            <option value="Gladewater/Kilgore, TX (GGG)"/>
+                            <option value="Glasgow, MT (GGW)"/>
+                            <option value="Glendive, MT (GDV)"/>
+                            <option value="Golovin, AK (GLV)"/>
+                            <option value="Goodnews Bay, AK (GNU)"/>
+                            <option value="Grand Canyon, AZ - Heliport (JGC)"/>
+                            <option value="Grand Canyon, AZ - National Park (GCN)"/>
+                            <option value="Grand Forks, ND (GFK)"/>
+                            <option value="Grand Island, NE (GRI)"/>
+                            <option value="Grand Junction, CO (GJT)"/>
+                            <option value="Grand Rapids, MI (GRR)"/>
+                            <option value="Grand Rapids, MN (GPZ)"/>
+                            <option value="Grayling, AK (KGX)"/>
+                            <option value="Great Falls, MT (GTF)"/>
+                            <option value="Green Bay, WI (GRB)"/>
+                            <option value="Greensboro, NC (GSO)"/>
+                            <option value="Greenville, MS (GLH)"/>
+                            <option value="Greenville, NC (PGV)"/>
+                            <option value="Greenville/Spartanburg, SC (GSP)"/>
+                            <option value="Groton/New London, CT (GON)"/>
+                            <option value="Gulfport, MS (GPT)"/>
+                            <option value="Gunnison, CO (GUC)"/>
+                            <option value="Gustavus, AK (GST)"/>
+                            <option value="Hagerstown, MD (HGR)"/>
+                            <option value="Hailey, ID (SUN)"/>
+                            <option value="Haines, AK (HNS)"/>
+                            <option value="Hampton, VA (PHF)"/>
+                            <option value="Hana, HI - Island of Maui (HNM)"/>
+                            <option value="Hanapepe, HI (PAK)"/>
+                            <option value="Hancock, MI (CMX)"/>
+                            <option value="Hanover, NH (LEB)"/>
+                            <option value="Harlingen, TX (HRL)"/>
+                            <option value="Harrisburg, PA (MDT)"/>
+                            <option value="Harrison, AR (HRO)"/>
+                            <option value="Hartford, CT (BDL)"/>
+                            <option value="Havasupai, AZ (HAE)"/>
+                            <option value="Havre, MT (HVR)"/>
+                            <option value="Hayden, CO (HDN)"/>
+                            <option value="Hays, KS (HYS)"/>
+                            <option value="Healy Lake, AK (HKB)"/>
+                            <option value="Helena, MT (HLN)"/>
+                            <option value="Hendersonville, NC (AVL)"/>
+                            <option value="Hibbing/Chisholm, MN (HIB)"/>
+                            <option value="Hickory, NC (HKY)"/>
+                            <option value="High Point, NC (GSO)"/>
+                            <option value="Hilo, HI - Island of Hawaii (ITO)"/>
+                            <option value="Hilton Head, SC (HHH)"/>
+                            <option value="Hobbs, NM (HBB)"/>
+                            <option value="Hollis, AK (HYL)"/>
+                            <option value="Holy Cross, AK (HCR)"/>
+                            <option value="Homer, AK (HOM)"/>
+                            <option value="Honolulu, HI - Island of Oahu (HNL)"/>
+                            <option value="Hoolehua, HI - Island of Molokai (MKK)"/>
+                            <option value="Hoonah, AK (HNH)"/>
+                            <option value="Hooper Bay, AK (HPB)"/>
+                            <option value="Hot Springs, AR (HOT)"/>
+                            <option value="Houston, TX - All airports (HOU)"/>
+                            <option value="Houston, TX - Hobby (HOU)"/>
+                            <option value="Houston, TX - Intercontinental (IAH)"/>
+                            <option value="Hughes, AK (HUS)"/>
+                            <option value="Huntington, WV/Ashland, KY (HTS)"/>
+                            <option value="Huntsville, AL (HSV)"/>
+                            <option value="Huron, SD (HON)"/>
+                            <option value="Huslia, AK (HSL)"/>
+                            <option value="Hyannis, MA (HYA)"/>
+                            <option value="Hydaburg, AK (HYG)"/>
+                            <option value="Idaho Falls, ID (IDA)"/>
+                            <option value="Igiugig, AK (IGG)"/>
+                            <option value="Iliamna, AK (ILI)"/>
+                            <option value="Imperial, CA (IPL)"/>
+                            <option value="Indianapolis, IN (IND)"/>
+                            <option value="International Falls, MN (INL)"/>
+                            <option value="Inyokern, CA (IYK)"/>
+                            <option value="Iron Mountain, MI (IMT)"/>
+                            <option value="Ironwood, MI (IWD)"/>
+                            <option value="Islip, NY (ISP)"/>
+                            <option value="Ithaca, NY (ITH)"/>
+                            <option value="Jackson Hole, WY (JAC)"/>
+                            <option value="Jackson, MS (JAN)"/>
+                            <option value="Jackson, TN (MKL)"/>
+                            <option value="Jacksonville, FL (JAX)"/>
+                            <option value="Jacksonville, NC (OAJ)"/>
+                            <option value="Jamestown, ND (JMS)"/>
+                            <option value="Jamestown, NY (JHW)"/>
+                            <option value="Janesville, WI (JVL)"/>
+                            <option value="Johnson City, NY (BGM)"/>
+                            <option value="Johnson City, TN (TRI)"/>
+                            <option value="Johnstown, PA (JST)"/>
+                            <option value="Jonesboro, AR (JBR)"/>
+                            <option value="Joplin, MO (JLN)"/>
+                            <option value="Juneau, AK (JNU)"/>
+                            <option value="Kahului, HI - Island of Maui, (OGG)"/>
+                            <option value="Kake, AK (KAE)"/>
+                            <option value="Kakhonak, AK (KNK)"/>
+                            <option value="Kalamazoo, MI (AZO)"/>
+                            <option value="Kalaupapa, HI - Island of Molokai, (LUP)"/>
+                            <option value="Kalskag, AK (KLG)"/>
+                            <option value="Kaltag, AK (KAL)"/>
+                            <option value="Kamuela, HI - Island of Hawaii, (MUE)"/>
+                            <option value="Kansas City, MO (MCI)"/>
+                            <option value="Kapalua, HI - Island of Maui, (JHM)"/>
+                            <option value="Kasaan, AK (KXA)"/>
+                            <option value="Kasigluk, AK (KUK)"/>
+                            <option value="Kauai Island/Lihue, HI (LIH)"/>
+                            <option value="Kearney, NE (EAR)"/>
+                            <option value="Keene, NH (EEN)"/>
+                            <option value="Kenai, AK (ENA)"/>
+                            <option value="Ketchikan, AK (KTN)"/>
+                            <option value="Key West, FL (EYW)"/>
+                            <option value="Keystone, CO - Van service (QKS)"/>
+                            <option value="Kiana, AK (IAN)"/>
+                            <option value="Kilgore/Gladewater, TX (GGG)"/>
+                            <option value="Killeen, TX (ILE)"/>
+                            <option value="King Cove, AK (KVC)"/>
+                            <option value="King Salmon, AK (AKN)"/>
+                            <option value="Kingman, AZ (IGM)"/>
+                            <option value="Kingsport, TN (TRI)"/>
+                            <option value="Kipnuk, AK (KPN)"/>
+                            <option value="Kirksville, MO (IRK)"/>
+                            <option value="Kivalina, AK (KVL)"/>
+                            <option value="Klamath Falls, OR (LMT)"/>
+                            <option value="Klawock, AK (KLW)"/>
+                            <option value="Knoxville, TN (TYS)"/>
+                            <option value="Kobuk, AK (OBU)"/>
+                            <option value="Kodiak, AK (ADQ)"/>
+                            <option value="Kona, HI - Island of Hawaii (KOA)"/>
+                            <option value="Kongiganak, AK (KKH)"/>
+                            <option value="Kotlik, AK (KOT)"/>
+                            <option value="Kotzebue, AK (OTZ)"/>
+                            <option value="Koyukuk, AK (KYU)"/>
+                            <option value="Kwethluk, AK (KWT)"/>
+                            <option value="Kwigillingok, AK (KWK)"/>
+                            <option value="La Crosse, WI (LSE)"/>
+                            <option value="Lafayette, IN (LAF)"/>
+                            <option value="Lafayette, LA (LFT)"/>
+                            <option value="Lake Charles, LA (LCH)"/>
+                            <option value="Lake Havasu City, AZ (HII)"/>
+                            <option value="Lake Minchumina, AK (LMA)"/>
+                            <option value="Lanai City, HI - Island of Lanai (LNY)"/>
+                            <option value="Lancaster, PA (LNS)"/>
+                            <option value="Lansing, MI (LAN)"/>
+                            <option value="Laramie, WY (LAR)"/>
+                            <option value="Laredo, TX (LRD)"/>
+                            <option value="Las Vegas, NV (LAS)"/>
+                            <option value="Latrobe, PA (LBE)"/>
+                            <option value="Laurel, MS (PIB)"/>
+                            <option value="Lawton, OK (LAW)"/>
+                            <option value="Lebanon, NH (LEB)"/>
+                            <option value="Levelock, AK (KLL)"/>
+                            <option value="Lewisburg, WV (LWB)"/>
+                            <option value="Lewiston, ID (LWS)"/>
+                            <option value="Lewistown, MT (LWT)"/>
+                            <option value="Lexington, KY (LEX)"/>
+                            <option value="Liberal, KS (LBL)"/>
+                            <option value="Lihue, HI - Island of Kaui (LIH)"/>
+                            <option value="Lincoln, NE (LNK)"/>
+                            <option value="Little Rock, AR (LIT)"/>
+                            <option value="Long Beach, CA (LGB)"/>
+                            <option value="Longview, TX (GGG)"/>
+                            <option value="Lopez Island, WA (LPS)"/>
+                            <option value="Los Angeles, CA (LAX)"/>
+                            <option value="Louisville, KY (SDF)"/>
+                            <option value="Loveland/Fort Collins, CO - Municipal Airport (FNL)"/>
+                            <option value="Loveland/Fort Collins, CO - Bus service (QWF)"/>
+                            <option value="Lubbock, TX (LBB)"/>
+                            <option value="Macon, GA (MCN)"/>
+                            <option value="Madison, WI (MSN)"/>
+                            <option value="Madras, OR (MDJ)"/>
+                            <option value="Manchester, NH (MHT)"/>
+                            <option value="Manhattan, KS (MHK)"/>
+                            <option value="Manistee, MI (MBL)"/>
+                            <option value="Mankato, MN (MKT)"/>
+                            <option value="Manley Hot Springs, AK (MLY)"/>
+                            <option value="Manokotak, AK (KMO)"/>
+                            <option value="Marietta, OH/Parkersburg, WV (PKB)"/>
+                            <option value="Marion, IL (MWA)"/>
+                            <option value="Marquette, MI (MQT)"/>
+                            <option value="Marshall, AK (MLL)"/>
+                            <option value="Martha's Vineyard, MA (MVY)"/>
+                            <option value="Martinsburg, PA (AOO)"/>
+                            <option value="Mason City, IA (MCW)"/>
+                            <option value="Massena, NY (MSS)"/>
+                            <option value="Maui, HI (OGG)"/>
+                            <option value="Mcallen, TX (MFE)"/>
+                            <option value="Mccook, NE (MCK)"/>
+                            <option value="Mcgrath, AK (MCG)"/>
+                            <option value="Medford, OR (MFR)"/>
+                            <option value="Mekoryuk, AK (MYU)"/>
+                            <option value="Melbourne, FL (MLB)"/>
+                            <option value="Memphis, TN (MEM)"/>
+                            <option value="Merced, CA (MCE)"/>
+                            <option value="Meridian, MS (MEI)"/>
+                            <option value="Metlakatla, AK (MTM)"/>
+                            <option value="Meyers Chuck, AK (WMK)"/>
+                            <option value="Miami, FL - International (MIA)"/>
+                            <option value="Miami, FL - Sea Plane Base (MPB)"/>
+                            <option value="Midland, MI (MBS)"/>
+                            <option value="Midland/Odessa, TX (MAF)"/>
+                            <option value="Miles City, MT (MLS)"/>
+                            <option value="Milwaukee, WI (MKE)"/>
+                            <option value="Minneapolis, MN (MSP)"/>
+                            <option value="Minot, ND (MOT)"/>
+                            <option value="Minto, AK (MNT)"/>
+                            <option value="Mission, TX (MFE)"/>
+                            <option value="Missoula, MT (MSO)"/>
+                            <option value="Moab, UT (CNY)"/>
+                            <option value="Mobile, AL (MOB)"/>
+                            <option value="Modesto, CA (MOD)"/>
+                            <option value="Moline, IL (MLI)"/>
+                            <option value="Monroe, LA (MLU)"/>
+                            <option value="Monterey, CA (MRY)"/>
+                            <option value="Montgomery, AL (MGM)"/>
+                            <option value="Montrose, CO (MTJ)"/>
+                            <option value="Morgantown, WV (MGW)"/>
+                            <option value="Moses Lake, WA (MWH)"/>
+                            <option value="Mountain Home, AR (WMH)"/>
+                            <option value="Mountain Village, AK (MOU)"/>
+                            <option value="Muscle Shoals, AL (MSL)"/>
+                            <option value="Muskegon, MI (MKG)"/>
+                            <option value="Myrtle Beach, SC (MYR)"/>
+                            <option value="Nantucket, MA (ACK)"/>
+                            <option value="Napakiak, AK (WNA)"/>
+                            <option value="Napaskiak, AK (PKA)"/>
+                            <option value="Naples, FL (APF)"/>
+                            <option value="Nashville, TN (BNA)"/>
+                            <option value="Naukiti, AK (NKI)"/>
+                            <option value="Nelson Lagoon, AK (NLG)"/>
+                            <option value="New Chenega, AK (NCN)"/>
+                            <option value="New Haven, CT (HVN)"/>
+                            <option value="New Koliganek, AK (KGK)"/>
+                            <option value="New London/Groton (GON)"/>
+                            <option value="New Orleans, LA (MSY)"/>
+                            <option value="New Stuyahok, AK (KNW)"/>
+                            <option value="New York, NY - All airports (NYC)"/>
+                            <option value="New York, NY - Kennedy (JFK)"/>
+                            <option value="New York, NY - La Guardia (LGA)"/>
+                            <option value="Newark, NJ (EWR)"/>
+                            <option value="Newburgh/Stewart Field, NY (SWF)"/>
+                            <option value="Newport News, VA (PHF)"/>
+                            <option value="Newtok, AK (WWT)"/>
+                            <option value="Nightmute, AK (NME)"/>
+                            <option value="Nikolai, AK (NIB)"/>
+                            <option value="Nikolski, AK (IKO)"/>
+                            <option value="Noatak, AK (WTK)"/>
+                            <option value="Nome, AK (OME)"/>
+                            <option value="Nondalton, AK (NNL)"/>
+                            <option value="Noorvik, AK (ORV)"/>
+                            <option value="Norfolk, NE (OFK)"/>
+                            <option value="Norfolk, VA (ORF)"/>
+                            <option value="North Bend, OR (OTH)"/>
+                            <option value="North Platte, NE (LBF)"/>
+                            <option value="Northway, AK (ORT)"/>
+                            <option value="Nuiqsut, AK (NUI)"/>
+                            <option value="Nulato, AK (NUL)"/>
+                            <option value="Nunapitchuk, AK (NUP)"/>
+                            <option value="Oakland, CA (OAK)"/>
+                            <option value="Odessa/Midland, TX (MAF)"/>
+                            <option value="Ogdensburg, NY (OGS)"/>
+                            <option value="Oklahoma City, OK (OKC)"/>
+                            <option value="Omaha, NE (OMA)"/>
+                            <option value="Ontario, CA (ONT)"/>
+                            <option value="Orange County, CA (SNA)"/>
+                            <option value="Orlando, FL - Herndon (ORL)"/>
+                            <option value="Orlando, FL - International (MCO)"/>
+                            <option value="Oshkosh, WI (OSH)"/>
+                            <option value="Ottumwa, IA (OTM)"/>
+                            <option value="Owensboro, KY (OWB)"/>
+                            <option value="Oxnard/Ventura, CA (OXR)"/>
+                            <option value="Paducah, KY (PAH)"/>
+                            <option value="Page, AZ (PGA)"/>
+                            <option value="Palm Springs, CA (PSP)"/>
+                            <option value="Panama City, FL (PFN)"/>
+                            <option value="Parkersburg, WV/Marietta, OH (PKB)"/>
+                            <option value="Pasco, WA (PSC)"/>
+                            <option value="Pedro Bay, AK (PDB)"/>
+                            <option value="Pelican, AK (PEC)"/>
+                            <option value="Pellston, MI (PLN)"/>
+                            <option value="Pendleton, OR (PDT)"/>
+                            <option value="Pensacola, FL (PNS)"/>
+                            <option value="Peoria, IL (PIA)"/>
+                            <option value="Perryville, AK (KPV)"/>
+                            <option value="Petersburg, AK (PSG)"/>
+                            <option value="Philadelphia, PA - International (PHL)"/>
+                            <option value="Philadelphia, PA - Trenton/Mercer NJ (TTN)"/>
+                            <option value="Phoenix, AZ (PHX)"/>
+                            <option value="Pierre, SD (PIR)"/>
+                            <option value="Pilot Point, AK - Ugashnik Bay (UGB)"/>
+                            <option value="Pilot Point, AK (PIP)"/>
+                            <option value="Pilot Station, AK (PQS)"/>
+                            <option value="Pittsburgh, PA (PIT)"/>
+                            <option value="Platinum, AK (PTU)"/>
+                            <option value="Plattsburgh, NY (PLB)"/>
+                            <option value="Pocatello, ID (PIH)"/>
+                            <option value="Point Baker, AK (KPB)"/>
+                            <option value="Point Hope, AK (PHO)"/>
+                            <option value="Point Lay, AK (PIZ)"/>
+                            <option value="Ponca City, OK (PNC)"/>
+                            <option value="Ponce, Puerto Rico (PSE)"/>
+                            <option value="Port Alsworth, AK (PTA)"/>
+                            <option value="Port Angeles, WA (CLM)"/>
+                            <option value="Port Arthur/Beaumont, TX (BPT)"/>
+                            <option value="Port Clarence, AK (KPC)"/>
+                            <option value="Port Heiden, AK (PTH)"/>
+                            <option value="Port Moller, AK (PML)"/>
+                            <option value="Port Protection, AK (PPV)"/>
+                            <option value="Portage Creek, AK (PCA)"/>
+                            <option value="Portland, ME (PWM)"/>
+                            <option value="Portland, OR (PDX)"/>
+                            <option value="Portsmouth, NH (PSM)"/>
+                            <option value="Poughkeepsie, NY (POU)"/>
+                            <option value="Prescott, AZ (PRC)"/>
+                            <option value="Presque Isle, ME (PQI)"/>
+                            <option value="Princeton, WV (BLF)"/>
+                            <option value="Providence, RI (PVD)"/>
+                            <option value="Provincetown, MA (PVC)"/>
+                            <option value="Prudhoe Bay/Deadhorse, AK (SCC)"/>
+                            <option value="Pueblo, CO (PUB)"/>
+                            <option value="Pullman, WA (PUW)"/>
+                            <option value="Quincy, IL (UIN)"/>
+                            <option value="Quinhagak, AK (KWN)"/>
+                            <option value="Raleigh/Durham, NC (RDU)"/>
+                            <option value="Rampart, AK (RMP)"/>
+                            <option value="Rapid City, SD (RAP)"/>
+                            <option value="Reading, PA (RDG)"/>
+                            <option value="Red Devil, AK (RDV)"/>
+                            <option value="Redding, CA (RDD)"/>
+                            <option value="Redmond, OR (RDM)"/>
+                            <option value="Reno, NV (RNO)"/>
+                            <option value="Rhinelander, WI, (RHI)"/>
+                            <option value="Richmond, VA (RIC)"/>
+                            <option value="Riverton, WY (RIW)"/>
+                            <option value="Roanoke, VA (ROA)"/>
+                            <option value="Roche Harbor, WA (RCE)"/>
+                            <option value="Rochester, MN (RST)"/>
+                            <option value="Rochester, NY (ROC)"/>
+                            <option value="Rock Springs, WY (RKS)"/>
+                            <option value="Rockford, IL (RFD)"/>
+                            <option value="Rockland, ME (RKD)"/>
+                            <option value="Rosario, WA (RSJ)"/>
+                            <option value="Roswell, NM (ROW)"/>
+                            <option value="Ruby, AK (RBY)"/>
+                            <option value="Russian Mission, AK (RSH)"/>
+                            <option value="Rutland, VT (RUT)"/>
+                            <option value="Sacramento, CA (SMF)"/>
+                            <option value="Saginaw, MI (MBS)"/>
+                            <option value="Saint Cloud, MN (STC)"/>
+                            <option value="Saint George Island, AK (STG)"/>
+                            <option value="Saint George, UT (SGU)"/>
+                            <option value="Saint Louis, MO (STL)"/>
+                            <option value="Saint Mary's, AK (KSM)"/>
+                            <option value="Saint Michael, AK (SMK)"/>
+                            <option value="Saint Paul Island, AK (SNP)"/>
+                            <option value="Salem, OR (SLE)"/>
+                            <option value="Salina, KS (SLN)"/>
+                            <option value="Salisbury-Ocean City, MD (SBY)"/>
+                            <option value="Salt Lake City, UT (SLC)"/>
+                            <option value="San Angelo, TX (SJT)"/>
+                            <option value="San Antonio, TX (SAT)"/>
+                            <option value="San Diego, CA (SAN)"/>
+                            <option value="San Francisco, CA (SFO)"/>
+                            <option value="San Jose, CA (SJC)"/>
+                            <option value="San Juan, Puerto Rico (SJU)"/>
+                            <option value="San Luis Obispo, CA (SBP)"/>
+                            <option value="Sand Point, AK (SDP)"/>
+                            <option value="Sanford, FL (SFB)"/>
+                            <option value="Santa Ana, CA (SNA)"/>
+                            <option value="Santa Barbara, CA (SBA)"/>
+                            <option value="Santa Fe, NM (SAF)"/>
+                            <option value="Santa Maria, CA (SMX)"/>
+                            <option value="Santa Rosa, CA (STS)"/>
+                            <option value="Saranac Lake, NY (SLK)"/>                            
+                        </datalist>
+                            <br>              
+                            Departure Date:
+                            <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart"><br>
+                            Return Date:
+                            <input type = "date" id= "return" onclick = "getmin()"  name="return" disabled>
+                            <br>     
+                            <script>
+                                function getToday()
+                                {
+                                    var rt = document.getElementById("return").value;
+                                    var today = new Date();
+                                    var dd = today.getDate();
+                                    var mm = today.getMonth()+1;
+                                    var yyyy = today.getFullYear();
+                                    
+                                    if(dd<10){
+                                      dd='0'+dd
+                                    } 
+                                    if(mm<10){
+                                      mm='0'+mm
+                                    } 
+
+                                    today = yyyy+'-'+mm+'-'+dd;
+                                    document.getElementById("depart").setAttribute("min", today);
+                                    document.getElementById("depart").setAttribute("max", rt);
+                                }
+                            </script>
+  
+                            <script>
+                                function getmin()
+                                {
+                                    var dp = document.getElementById("depart").value;
+                                    
+                                    document.getElementById("return").disabled = false;
+                                    document.getElementById("return").setAttribute("min", dp);
+                                }
+                            </script>
+                            <hr class="mb-3">
+                        <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
+                        </form>
+			    
+                        <br>
+                   </section>
+               </main>
+           </div>
+        </div>
+        
+        <div class="tm-row">
+            <div class="tm-col-left text-center">            
+                <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                    <li class="tm-bg-control" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul>            
+            </div>        
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                   <h6>Travel Tool by Gregory Bittinger, Jacob Johnson, Rudolph Hanzes, Kaleb Piper and Robert Minerd</h6>
+                </footer>
+            </div>  
+        </div>        
+
+        <!-- Diagonal background design -->
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+
+</html>

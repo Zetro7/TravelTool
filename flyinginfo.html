@@ -11,7 +11,22 @@
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-diagoona.css" rel="stylesheet" />
     <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/trave-diary.png">
+    <configuration>
+    <system.webServer>
+        <httpProtocol>
+            <customHeaders>
+                <add name="Access-Control-Allow-Origin" value="*" />
+            </customHeaders>
+        </httpProtocol>
+    </system.webServer>
+</configuration>
+<!--
 
+TemplateMo 550 Diagoona
+
+https://templatemo.com/tm-550-diagoona
+
+-->
 </head>
 
 <body>
@@ -59,18 +74,87 @@
                     </nav>
                 </div>
             </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+		<script src="hotels.js"></script>
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
-                        <h2 class="mb-5 tm-content-title">Select Mode of Transportation</h2>
-                                
-                        <a href="drivinginfo.html" class="btn btn-primary" style="background-color:cadetblue" \>Driving </a>
-			            <a href="tripplannerorig.html" class="btn btn-primary" style="background-color:cadetblue" \>Flying </a>
+                        <div class="entered_data" id="entered_data_page">Results</div>
+						<div class ="flightprices"></div>                      
+			                    <h1>Flight Results:</h1>
+                                <table id="flightTable">
+                                    <thead>
+                                    <tr>
+                                        <th onclick="sortTable(0)">Airline</th>
+                                        <th onclick="sortTable(1)">Price</th>
+                                        <th>Booking Link</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <script src="testflights.js"></script>
+                                    </tbody>
+                                </table>
                         <hr class="mb-5">
                    </section>
                </main>
            </div>
+            <script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("flightTable");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
         </div>
         
         <div class="tm-row">

@@ -11,7 +11,13 @@
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-diagoona.css" rel="stylesheet" />
     <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/trave-diary.png">
+<!--
 
+TemplateMo 550 Diagoona
+
+https://templatemo.com/tm-550-diagoona
+
+-->
 </head>
 
 <body>
@@ -63,11 +69,22 @@
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
-                        <h2 class="mb-5 tm-content-title">Select Mode of Transportation</h2>
-                                
-                        <a href="drivinginfo.html" class="btn btn-primary" style="background-color:cadetblue" \>Driving </a>
-			            <a href="tripplannerorig.html" class="btn btn-primary" style="background-color:cadetblue" \>Flying </a>
-                        <hr class="mb-5">
+                        <form action="drivingresults.html" method="GET">
+			             <h2 class="mb-6 tm-content-title">Driving Information</h2>
+                        Origin City:
+                        <input  type="text"
+                                id="Origin"
+                                name ="origin">
+                        <br>
+                        Destination City:
+                        <input  type="text"
+                                id="Destination"
+                               name ="destination">
+                            <hr class="mb-3">
+                        <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
+                        </form>
+			    
+                        <br>
                    </section>
                </main>
            </div>

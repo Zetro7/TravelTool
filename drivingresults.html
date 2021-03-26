@@ -11,7 +11,22 @@
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-diagoona.css" rel="stylesheet" />
     <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/trave-diary.png">
+    <configuration>
+    <system.webServer>
+        <httpProtocol>
+            <customHeaders>
+                <add name="Access-Control-Allow-Origin" value="*" />
+            </customHeaders>
+        </httpProtocol>
+    </system.webServer>
+</configuration>
+<!--
 
+TemplateMo 550 Diagoona
+
+https://templatemo.com/tm-550-diagoona
+
+-->
 </head>
 
 <body>
@@ -59,15 +74,21 @@
                     </nav>
                 </div>
             </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMZlqsl7P2r1cb-Dv3-oFN7teR7bf2U5Y"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+            <script src="distanceMatrix.js"></script>
+		  <script src="hotels.js"></script>
+            
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
-                        <h2 class="mb-5 tm-content-title">Select Mode of Transportation</h2>
-                                
-                        <a href="drivinginfo.html" class="btn btn-primary" style="background-color:cadetblue" \>Driving </a>
-			            <a href="tripplannerorig.html" class="btn btn-primary" style="background-color:cadetblue" \>Flying </a>
+                        <div class="entered_data" id="entered_data_page">Results</div>
                         <hr class="mb-5">
+                        Approximate Driving Time
+                        <a id="driveTime"></a>
+                        Recommended Gas Stops
+                        <a id="gasStops"></a>
                    </section>
                </main>
            </div>
