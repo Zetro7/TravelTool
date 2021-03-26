@@ -6,6 +6,20 @@ fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&page
 	}
 })
 
+fetch("https://hotels4.p.rapidapi.com/locations/search?query=new%20york&locale=en_US", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
+		"x-rapidapi-host": "hotels4.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
 //var hotelArray = response.data.body.searchResults.results[]
 .then(response => response.json())
 .then(response => {
