@@ -77,88 +77,21 @@ https://templatemo.com/tm-550-diagoona
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMZlqsl7P2r1cb-Dv3-oFN7teR7bf2U5Y"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
             <script src="distanceMatrix.js"></script>
-		<script src="hotels.js"></script>
+		  <script src="hotels.js"></script>
             
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
                         <div class="entered_data" id="entered_data_page">Results</div>
-						<div class ="flightprices"></div>
-                        <script src="main.js"></script>                        
-			                    <h1>Flight Results:</h1>
-                                <table id="flightTable">
-                                    <thead>
-                                    <tr>
-                                        <th onclick="sortTable(0)">Airline</th>
-                                        <th onclick="sortTable(1)">Price</th>
-                                        <th>Booking Link</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <script src="testflights.js"></script>
-                                    </tbody>
-                                </table>
                         <hr class="mb-5">
+                        Approximate Driving Time
+                        <a id="driveTime"></a>
+                        Recommended Gas Stops
+                        <a id="gasStops"></a>
                    </section>
                </main>
            </div>
-            <script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("flightTable");
-  switching = true;
-  // Set the sorting direction to ascending:
-  dir = "asc";
-  /* Make a loop that will continue until
-  no switching has been done: */
-  while (switching) {
-    // Start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /* Loop through all table rows (except the
-    first, which contains table headers): */
-    for (i = 1; i < (rows.length - 1); i++) {
-      // Start by saying there should be no switching:
-      shouldSwitch = false;
-      /* Get the two elements you want to compare,
-      one from current row and one from the next: */
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /* Check if the two rows should switch place,
-      based on the direction, asc or desc: */
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          // If so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /* If a switch has been marked, make the switch
-      and mark that a switch has been done: */
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      // Each time a switch is done, increase this count by 1:
-      switchcount ++;
-    } else {
-      /* If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again. */
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
         </div>
         
         <div class="tm-row">
