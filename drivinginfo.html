@@ -81,7 +81,44 @@ https://templatemo.com/tm-550-diagoona
                                 id="Destination"
                                name ="destination">
                             <hr class="mb-3">
-                        <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
+                            <h2 class="mb-6 tm-content-title">Hotel Information</h2>
+                        Check-In Date:
+                        <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart"><br>
+                        Check-Out Date:
+                        <input type = "date" id= "return" onclick = "getmin()"  name="return" disabled>
+                            <script>
+                                function getToday()
+                                {
+                                    var rt = document.getElementById("return").value;
+                                    var today = new Date();
+                                    var dd = today.getDate();
+                                    var mm = today.getMonth()+1;
+                                    var yyyy = today.getFullYear();
+                                    
+                                    if(dd<10){
+                                      dd='0'+dd
+                                    } 
+                                    if(mm<10){
+                                      mm='0'+mm
+                                    } 
+
+                                    today = yyyy+'-'+mm+'-'+dd;
+                                    document.getElementById("depart").setAttribute("min", today);
+                                    document.getElementById("depart").setAttribute("max", rt);
+                                }
+                            </script>
+  
+                            <script>
+                                function getmin()
+                                {
+                                    var dp = document.getElementById("depart").value;
+                                    
+                                    document.getElementById("return").disabled = false;
+                                    document.getElementById("return").setAttribute("min", dp);
+                                }
+                            </script>
+                            <br>
+                            <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
                         </form>
 			    
                         <br>
