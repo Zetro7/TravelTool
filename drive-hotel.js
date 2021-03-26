@@ -1,6 +1,7 @@
 //This section parses the userdata string to pull out origin and destination
 var splitNames = userData.split("=");
 console.log(splitNames);
+var initGoogleURL = "https://www.google.com/search?q=";
 var originSplit = splitNames[1].split("&");
 var destSplit = splitNames[2].split("&");
 var departSplit = splitNames[3].split("&");
@@ -69,6 +70,10 @@ fetch(finalHotelDataURL, {
     var table = document.getElementById("hotelTable");
     
     for(var n = 0; n < hotelCount/10; n++){
+        
+        var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
+        var googleHyperLinkLabel = "Book Here";
+        temp5 = googleHyperLinkLabel.link(finalGoogleURL);
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
          temp3 = response.data.body.searchResults.results[n].starRating;
@@ -85,12 +90,13 @@ fetch(finalHotelDataURL, {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
     
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
-     
+        cell5.innerHTML = temp5;
         
     }
 })
