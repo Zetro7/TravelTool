@@ -22,6 +22,7 @@ fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&page
     var temp3;
     var temp4;
     var temp5;
+	
     var table = document.getElementById("hotelTable");
     
     for(var n = 0; n < hotelCount/10; n++){
