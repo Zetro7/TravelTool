@@ -58,7 +58,6 @@ fetch(finalHotelDataURL, {
     for(k = 0; k < hotelCount/10; k++)
     {
         console.log(response.data.body.searchResults.results[k]);
-        console.log(response.data.body.searchResults.results[k].urls);
     }
     
     var temp1;
