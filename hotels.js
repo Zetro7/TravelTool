@@ -1,7 +1,7 @@
 fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&pageNumber=1&checkIn=2021-03-26&checkOut=2021-03-31&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "fe2be3ebc9msha38fa8cac5dbaddp1dd0dejsn9ace77793bbf",
+		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
@@ -27,8 +27,8 @@ fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&page
     
     for(var n = 0; n < hotelCount/10; n++){
         temp1 = response.data.body.searchResults.results[n].name;
-        temp2 = response.data.body.searchResults.results[n].ratePlan.price.current + " per night";
-         temp3 = response.data.body.searchResults.results[n].starRating + " Stars";
+        temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
+         temp3 = response.data.body.searchResults.results[n].starRating;
         for(var l = 0; l < hotelCount/10; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;

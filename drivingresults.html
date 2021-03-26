@@ -77,8 +77,6 @@ https://templatemo.com/tm-550-diagoona
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMZlqsl7P2r1cb-Dv3-oFN7teR7bf2U5Y"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
             <script src="distanceMatrix.js"></script>
-		  <script src="hotels.js"></script>
-            
             <div class="tm-row">
                 <div class="tm-col-left"></div>
                 <main class="tm-col-right">
@@ -90,6 +88,23 @@ https://templatemo.com/tm-550-diagoona
                         Recommended Gas Stops
                         <a id="gasStops"></a>
                    </section>
+                    <br>
+                         <hr class="mb-3">
+                        <h1>Hotel Results</h1>
+                        <table id ="hotelTable">
+                            <thead>
+                            <tr>
+                                <th>Hotel</th>
+                                <th>Price (per night)</th>
+                                <th>Rating (stars)</th>
+                                <th>Rooms Left</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <script src ="drive-hotel.js"></script>
+                            </tbody>
+                        </table>
+
                </main>
            </div>
         </div>
