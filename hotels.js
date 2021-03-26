@@ -1,4 +1,4 @@
-fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&pageNumber=1&checkIn=2021-03-20&checkOut=2021-03-25&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE", {
+fetch("https://hotels4.p.rapidapi.com/properties/list?destinationId=1474927&pageNumber=1&checkIn=2021-03-26&checkOut=2021-03-31&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "fe2be3ebc9msha38fa8cac5dbaddp1dd0dejsn9ace77793bbf",
