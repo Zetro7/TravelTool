@@ -24,7 +24,12 @@ function callback(response, status){
         var gasStops = gasStopsDec.toFixed();
         //console.log(distInt);
         //console.log(gasStops);
+        //Average car tank is 12 gallons
+        //Average gas prices are 2.87 (as of 4/1/21)
+        //34.44 comes from 12 * 2.87
+        var driveCost = gasStops * 34.44;
         document.getElementById("gasStops").innerHTML = gasStops;
+        document.getElementById("driveCost").innerHTML = driveCost;
     }
 }
 //fname=Jacob&lname=Johnson&origin=Pittsburgh&destination=Miami&originAir=Pittsburgh%2C+PA+%28PIT%29&destAir=Miami%2C+FL+-+International+%28MIA%29

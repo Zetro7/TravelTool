@@ -12,7 +12,7 @@ var departSplit = splitData[3].split("&");
 var depart = departSplit[0];
 var arrive = splitData[4];
 
-var url = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/6049617d5ebe2705663733fd/"
+var url = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60661d745ebe270566375a22/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
