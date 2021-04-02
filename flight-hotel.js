@@ -73,7 +73,7 @@ fetch(finalHotelDataURL, {
 	
     var table = document.getElementById("hotelTable");
     
-    for(var n = 0; n < hotelCount/10; n++){
+    for(var n = 0; n < hotelCount/8; n++){
         
     
         var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
@@ -82,7 +82,7 @@ fetch(finalHotelDataURL, {
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
          temp3 = response.data.body.searchResults.results[n].starRating;
-        for(var l = 0; l < hotelCount/10; l++)
+        for(var l = 0; l < hotelCount/8; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
             if(temp4 == undefined)
