@@ -41,7 +41,7 @@ console.log(finalHotelDataURL);
 destinationID + pageNumber=1(static) + checkIn + checkOut + pageSize=25(static) + adults1=1(static for now) + currency=USD(static) + locale=en_US(static)+sortOrder=PRICE(static)
 */
 
-//fetch(finalHotelDataURL)
+
 fetch(finalHotelDataURL, {
 	"method": "GET",
 	"headers": {
@@ -50,7 +50,7 @@ fetch(finalHotelDataURL, {
 	}
 })
 
-//var hotelArray = response.data.body.searchResults.results[]
+
 .then(response => response.json())
 .then(response => {
 	console.log(response);
@@ -65,7 +65,7 @@ fetch(finalHotelDataURL, {
     var temp3;
     var temp4;
     var temp5;
-	
+	var temp6;
     var table = document.getElementById("hotelTable");
     
     for(var n = 0; n < hotelCount/10; n++){
@@ -76,6 +76,9 @@ fetch(finalHotelDataURL, {
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
          temp3 = response.data.body.searchResults.results[n].starRating;
+         temp6 = document.createElement("addToTripButton");
+        document.body.appendChild(temp6);
+        
         for(var l = 0; l < hotelCount/10; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
@@ -90,12 +93,14 @@ fetch(finalHotelDataURL, {
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
     
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
         cell5.innerHTML = temp5;
+        cell6.innerHTML = temp6;
         
     }
 })
@@ -107,3 +112,5 @@ fetch(finalHotelDataURL, {
 .catch(err => {
 	console.error(err);
 });
+
+
