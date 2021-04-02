@@ -68,7 +68,7 @@ fetch(finalHotelDataURL, {
 	var temp6;
     var table = document.getElementById("hotelTable");
     
-    for(var n = 0; n < hotelCount/10; n++){
+    for(var n = 0; n < hotelCount/8; n++){
         
         var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
         var googleHyperLinkLabel = "Book Here";
@@ -79,7 +79,7 @@ fetch(finalHotelDataURL, {
          temp6 = document.createElement("addToTripButton");
         document.body.appendChild(temp6);
         
-        for(var l = 0; l < hotelCount/10; l++)
+        for(var l = 0; l < hotelCount/8; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
             if(temp4 == undefined)
