@@ -10,15 +10,26 @@ var originSplit2 = originSplit1[1].split("%");
 var destSplit2 = destSplit1[1].split("%");
 var departSplit = splitData[3].split("&");
 var depart = departSplit[0];
-var arrive = splitData[4];
+var returnDate = splitData[4];
+console.log(returnDate);
 
-var url = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60661d745ebe270566375a22/"
+var urlOne = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60661d745ebe270566375a22/"
+var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/60661d745ebe270566375a22/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
 var outbound = depart;
 
-var urlfinal = url.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
+if(returnDate != null){
+    var urlfinal = urlRound.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat("/".concat(returnDate.concat(urlex))))))));
+    console.log(urlfinal);
+}
+else{
+    var urlfinal = urlOne.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
+    console.log(urlfinal);
+}
+
+//var urlfinal = url.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
 //"https://api.flightapi.io/onewaytrip/6049617d5ebe2705663733fd/PIT/LAX/2021-04-04/1/0/0/Economy/USD"
 console.log(urlfinal);
 fetch(urlfinal)
@@ -39,7 +50,25 @@ fetch(urlfinal)
     var breakFlag;
     var tempCount = 0;
     
-    for(var i = 0; i < response.fares.length; i++){
+    //This section provides the 5 cheapest results
+    for(var m = 0; m < 5; m++){
+        idHold = response.fares[m].tripId;
+        codeHold = idHold.split(':');
+        codeFinal = codeHold[1].substring(0,2);
+        //This loop finds the corresponding airline to airline code
+        for(var n = 0; n < airlineCount; n++){
+            if(codeFinal === response.airlines[n].code){
+                airlineHold = response.airlines[n].name;
+                //console.log(airlineHold);
+            }
+        }
+        airlineArray[m] = airlineHold;
+        priceArray[m] = "$" + response.fares[m].price.totalAmount;
+        linkArray[m] = response.fares[m].handoffUrl;
+    }
+    
+    //This section provides one flight result from every airline
+    for(var i = 5; i < response.fares.length; i++){
         breakFlag = 0;
         idHold = response.fares[i].tripId;
         codeHold = idHold.split(':');
@@ -51,31 +80,33 @@ fetch(urlfinal)
                 //console.log(airlineHold);
             }
         }
+        //Check if an airline already has a result
         for(var j = 0; j < airlineCount; j++){
-            if(airlineHold === airlineArray[j]){
+            if(airlineHold === airlineArray[j+5]){
                 breakFlag = 1;
                 //console.log("Broken");
             }
         }
         if(breakFlag == 0){
             for(var l = 0; l < airlineCount; l++){
-                if(airlineArray[l] == null){
+                if(airlineArray[l+5] == null){
                     //console.log("Assigned");
-                    airlineArray[l] = airlineHold;
-                    priceArray[l] = "$" + response.fares[i].price.totalAmount;
-                    linkArray[l] = response.fares[i].handoffUrl;
+                    airlineArray[l+5] = airlineHold;
+                    priceArray[l+5] = "$" + response.fares[i].price.totalAmount;
+                    linkArray[l+5] = response.fares[i].handoffUrl;
                     break;
                 }
             }
         }
         tempCount++;
-        if(airlineArray[airlineCount] != null){
+        if(airlineArray[airlineCount+5] != null){
             break;
         }
     }
     console.log(airlineArray);
     console.log(priceArray);
     
+    //These few lines removes empty slots from the arrays
     var airlinesFinal = airlineArray.filter(function(el){
         return el != null;
     });
@@ -106,10 +137,11 @@ fetch(urlfinal)
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         
-        var link = document.createElement("a");
-        link.setAttribute("href", temp3);
-        var linkText = document.createTextNode("Book Here");
-        link.appendChild(linkText);
+        var link = document.createElement("input");
+        link.setAttribute("type", "radio")
+        //link.setAttribute("href", temp3);
+        //var linkText = document.createTextNode("Book Here");
+        //link.appendChild(linkText);
         
         cell3.appendChild(link);
         
