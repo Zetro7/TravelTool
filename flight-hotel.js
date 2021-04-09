@@ -74,7 +74,7 @@ fetch(finalHotelDataURL, {
  
     var table = document.getElementById("hotelTable");
     
-    for(var n = 0; n < hotelCount/10; n++){
+    for(var n = 0; n < 5; n++){
         
     
         var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
@@ -85,7 +85,7 @@ fetch(finalHotelDataURL, {
          temp3 = response.data.body.searchResults.results[n].starRating;
         var radioButton = document.createElement("input");
         radioButton.setAttribute("type", "radio");
-        for(var l = 0; l < hotelCount/10; l++)
+        for(var l = 0; l < 5; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
             if(temp4 == undefined)
