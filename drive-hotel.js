@@ -94,9 +94,6 @@ fetch(finalHotelDataURL, {
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
         var cell6 = row.insertCell(5);
-        
-        var link = document .createElement("input");
-        link.setAttribute("type", "radio")
     
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
