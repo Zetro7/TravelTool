@@ -67,7 +67,7 @@ fetch(finalHotelDataURL, {
     var temp4;
     var table = document.getElementById("hotelTable");
     
-    for(var n = 0; n < 10; n++){
+    for(var n = 0; n < 5; n++){
         
         var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
         var googleHyperLinkLabel = "Book Here";
