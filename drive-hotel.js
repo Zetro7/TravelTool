@@ -6,11 +6,12 @@ var originSplit = splitNames[1].split("&");
 var destSplit = splitNames[2].split("&");
 var departSplit = splitNames[3].split("&");
 var returnSplit = splitNames[4].split("&");
+var destHold = destSplit[0].split("+");
 
 //These variables are now user defined and sent to the API
 //https://hotels4.p.rapidapi.com/locations/search?query=new%20york&locale=en_US
 var origin = originSplit[0];
-var dest = destSplit[0];
+var dest = destHold[0].concat("%20".concat(destHold[1]));
 var departDate = departSplit[0];
 var returnDate = returnSplit[0];
 var hotelLocationURL = "https://hotels4.p.rapidapi.com/locations/search?query=";
@@ -20,7 +21,7 @@ console.log(finalHotelLocationURL);
 fetch(finalHotelLocationURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
+		"x-rapidapi-key": "c0fc24bd79msh019f02987794e44p153e68jsncddddeab7434",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
@@ -45,7 +46,7 @@ destinationID + pageNumber=1(static) + checkIn + checkOut + pageSize=25(static) 
 fetch(finalHotelDataURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
+		"x-rapidapi-key": "c0fc24bd79msh019f02987794e44p153e68jsncddddeab7434",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
@@ -64,22 +65,21 @@ fetch(finalHotelDataURL, {
     var temp2;
     var temp3;
     var temp4;
-    var temp5;
-	var temp6;
     var table = document.getElementById("hotelTable");
     
-    for(var n = 0; n < hotelCount/8; n++){
+    for(var n = 0; n < 10; n++){
         
         var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
         var googleHyperLinkLabel = "Book Here";
-        temp5 = googleHyperLinkLabel.link(finalGoogleURL);
+        
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
          temp3 = response.data.body.searchResults.results[n].starRating;
-         temp6 = document.createElement("addToTripButton");
-        document.body.appendChild(temp6);
+        var radioButton = document.createElement("input");
+        radioButton.setAttribute("type", "radio");
+       
         
-        for(var l = 0; l < hotelCount/8; l++)
+        for(var l = 0; l < 5; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
             if(temp4 == undefined)
@@ -91,16 +91,15 @@ fetch(finalHotelDataURL, {
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
+        var cell4 = row.insertCell(3); 
         var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
-    
+        
+        cell5.appendChild(radioButton);
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
-        cell5.innerHTML = temp5;
-        cell6.innerHTML = temp6;
+      
         
     }
 })
@@ -112,5 +111,7 @@ fetch(finalHotelDataURL, {
 .catch(err => {
 	console.error(err);
 });
+
+
 
 
