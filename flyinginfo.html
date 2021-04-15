@@ -21,11 +21,8 @@
     </system.webServer>
 </configuration>
 <!--
-
 TemplateMo 550 Diagoona
-
 https://templatemo.com/tm-550-diagoona
-
 -->
 </head>
 
@@ -92,11 +89,21 @@ https://templatemo.com/tm-550-diagoona
                                         <th onclick="sortTable(1)">Price</th>
                                         <th>Add to Trip</th>
                                     </tr>
-                                    </thead>
+                                    </thead> 
                                     <tbody>
-                                    <script src="testflights.js"></script>
+                                    <script src="testflights.js" onchange="loadingGif()"></script>
                                     </tbody>
                                 </table>
+                                <script>
+                                        function loadingGif()
+                                        {
+                                            if var dat = document.getElementById("flightTable").rows.length>0;
+                                            {
+                                                document.getElementById("loader").style.visibility = "hidden")
+                                            }
+                                        }
+                                    </script>
+                                <img id= "loader" src="plane_loader.gif"/>
                         <br>
                          <hr class="mb-3">
                         <h1>Hotel Results:</h1>
