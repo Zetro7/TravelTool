@@ -41,7 +41,7 @@ fetch(finalHotelLocationURL, {
     //console.log(userData);
 
 var hotelDataURL = "https://hotels4.p.rapidapi.com/properties/list?destinationId=";
-var finalHotelDataURL = hotelDataURL.concat(destinationID).concat("&pageNumber=1&").concat("checkIn=").concat(departDate).concat("&").concat(returnDate).concat("&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE");
+var finalHotelDataURL = hotelDataURL.concat(destinationID).concat("&pageNumber=1&").concat("checkIn=").concat(departDate).concat("&").concat("checkOut=").concat(returnDate).concat("&pageSize=25&adults1=1&currency=USD&locale=en_US&sortOrder=PRICE");
 console.log(finalHotelDataURL);
 /*
 destinationID + pageNumber=1(static) + checkIn + checkOut + pageSize=25(static) + adults1=1(static for now) + currency=USD(static) + locale=en_US(static)+sortOrder=PRICE(static)

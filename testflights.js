@@ -13,8 +13,8 @@ var depart = departSplit[0];
 var returnDate = splitData[4];
 console.log(returnDate);
 
-var urlOne = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60661d745ebe270566375a22/"
-var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/60661d745ebe270566375a22/"
+var urlOne = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/6078f04f5b6cbb4f6fcdfeb3/"
+var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6078f04f5b6cbb4f6fcdfeb3/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
@@ -35,6 +35,7 @@ console.log(urlfinal);
 fetch(urlfinal)
 .then(response => response.json())
 .then(response => {
+    if(response.fares.length > 10){
 	console.log(response);
     
     var airlineCount = response.airlines.length;
@@ -137,64 +138,31 @@ fetch(urlfinal)
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         
-        var link = document.createElement("input");
-        link.setAttribute("type", "radio")
-        //link.setAttribute("href", temp3);
-        //var linkText = document.createTextNode("Book Here");
-        //link.appendChild(linkText);
+        var link = document.createElement("a");
+        link.setAttribute("href", temp3);
+        var linkText = document.createTextNode("Book Here");
+        link.appendChild(linkText);
         
-        cell3.appendChild(link);
         
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
+        cell3.appendChild(link);
         
         
+    }
+        document.getElementById("loader").width = 0;
+        document.getElementById("loader").height = 0;
+        return 1;
+    }//endif
+    else{
+        console.log("Failed to Load Data");
+        console.log(response);
+        window.alert("Failed to Load Flights\nTry searching again or changing your airports.");
+        return 0;
     }
     
     //console.log(flightsArray.length);
     
-    /*var test = response.fares;
-    var priceOne = response.fares[0].price.totalAmount;
-    var priceTwo = response.fares[1].price.totalAmount;
-    var priceThree = response.fares[2].price.totalAmount;
-    
-    var idOne = response.fares[0].tripId;
-    console.log(idOne);
-    var idTwo = response.fares[1].tripId;
-    var idThree = response.fares[2].tripId;
-    
-    var code1T = idOne.split(':');
-    console.log(code1T);
-    var code1 = code1T[1].substring(0,2);
-    console.log(code1);
-    var code2T = idTwo.split(':');
-    var code2 = code2T[1].substring(0,2);
-    var code3T = idThree.split(':');
-    var code3 = code3T[1].substring(0,2);
-    
-    //var airline1 = response.airlines[0].name;
-    //var airline2 = response.airlines[1].name;
-    //var airline3 = response.airlines[2].name;
-    
-    for (var i = 0; i < response.airlines.length; i++){
-        if(code1 === response.airlines[i].code){
-            var airline1 = response.airlines[i].name;
-            console.log(airline1);
-        }
-        if(code2 === response.airlines[i].code){
-            var airline2 = response.airlines[i].name;
-        }
-        if(code3 === response.airlines[i].code){
-            var airline3 = response.airlines[i].name;
-        }
-    }
-    
-    document.getElementById("price1").innerHTML = priceOne;
-    document.getElementById("airline1").innerHTML = airline1;
-    document.getElementById("price2").innerHTML = priceTwo;
-    document.getElementById("airline2").innerHTML = airline2;
-    document.getElementById("price3").innerHTML = priceThree;
-    document.getElementById("airline3").innerHTML = airline3;*/
 })
 .catch(err => {
 	console.error(err);

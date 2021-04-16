@@ -20,6 +20,7 @@
         </httpProtocol>
     </system.webServer>
 </configuration>
+    <script src = "jquery-3.4.1.min.js"></script>
 <!--
 TemplateMo 550 Diagoona
 https://templatemo.com/tm-550-diagoona
@@ -85,22 +86,30 @@ https://templatemo.com/tm-550-diagoona
                                 <table id="flightTable" border = "1" bordercolor = " #ffffff" cellspacing ="10" cellpadding="5">
                                     <thead>
                                     <tr>
+
                                         <th onclick="sortTable(0)" style = "cursor: pointer">Airline</th>
                                         <th onclick="sortTable(1)" style = "cursor: pointer">Price</th>
                                         <th>Add to Trip</th>
+
                                     </tr>
                                     </thead> 
                                     <tbody>
                                     <script src="testflights.js" onchange="loadingGif()"></script>
                                     </tbody>
                                 </table>
+                        <a>Current Selection</a>
+                                <input type="text" id="flightChoice1" value="" name="flight1" size="25" readonly>
+                        <input type="hidden" id="flightChoice" value="" name="flightReal" size="0" readonly>
+                        <script src="selectFlight.js">
+                        </script>
                                 <script>
                                         function loadingGif()
                                         {
                                             var dat = document.getElementById("flightTable").rows.length;
 					    if (dat > 1)
                                             {
-                                                document.getElementById("loader").style.visibility = "hidden"
+                                                document.getElementById("loader").width = 0;
+                                                document.getElementById("loader").height = 0;
                                             }
                                         }
                                     </script>
@@ -111,6 +120,7 @@ https://templatemo.com/tm-550-diagoona
                         <table id ="hotelTable" border = "1">
                             <thead>
                             <tr>
+
                                 <style>
                                     th:hover{
                                         color: cadetblue
@@ -120,6 +130,7 @@ https://templatemo.com/tm-550-diagoona
                                 <th onclick="sortTable2(1)" style = "cursor: pointer">Price (per night)</th>
                                 <th onclick="sortTable2(1)" style = "cursor: pointer">Rating (stars)</th>
                                 <th onclick="sortTable2(1)" style = "cursor: pointer">Rooms Left</th>
+
                                 <th>Add to Trip</th>
                             </tr>
                             </thead>
