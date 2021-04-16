@@ -694,7 +694,7 @@ https://templatemo.com/tm-550-diagoona
                             <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart"><br>
                             Return Date:
 			    <br>
-                            <input type = "date" id= "return" onclick = "getmin()" onchange = "finished()" name="return" disabled>
+                            <input type = "date" id= "return" onclick = "getmin()" name="return" disabled>
                             <br>     
                             <script>
                                 function getToday()
@@ -724,6 +724,7 @@ https://templatemo.com/tm-550-diagoona
                                     
                                     document.getElementById("return").disabled = false;
                                     document.getElementById("return").setAttribute("min", dp);
+				    finished();
                                 }
                             </script>
 			    <script>
