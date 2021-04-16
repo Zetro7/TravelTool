@@ -105,7 +105,7 @@ fetch(finalHotelDataURL, {
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
-	cell4.innerHTML = temp5;
+	cell5.innerHTML = temp5;
       
      
         
