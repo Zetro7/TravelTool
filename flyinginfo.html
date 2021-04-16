@@ -85,8 +85,8 @@ https://templatemo.com/tm-550-diagoona
                                 <table id="flightTable" border = "1" bordercolor = " #ffffff" cellspacing ="10" cellpadding="5">
                                     <thead>
                                     <tr>
-                                        <th onclick="sortTable(0)">Airline</th>
-                                        <th onclick="sortTable(1)">Price</th>
+                                        <th onclick="sortTable(0)" style = "cursor: pointer">Airline</th>
+                                        <th onclick="sortTable(1)" style = "cursor: pointer">Price</th>
                                         <th>Add to Trip</th>
                                     </tr>
                                     </thead> 
@@ -111,10 +111,15 @@ https://templatemo.com/tm-550-diagoona
                         <table id ="hotelTable" border = "1">
                             <thead>
                             <tr>
-                                <th onclick="sortTable2(0)">Hotel</th>
-                                <th onclick="sortTable2(1)">Price (per night)</th>
-                                <th onclick="sortTable2(1)">Rating (stars)</th>
-                                <th onclick="sortTable2(1)">Rooms Left</th>
+                                <style>
+                                    th:hover{
+                                        color: cadetblue
+                                    }
+                                </style>
+                                <th onclick="sortTable2(0)" style = "cursor: pointer">Hotel</th>
+                                <th onclick="sortTable2(1)" style = "cursor: pointer">Price (per night)</th>
+                                <th onclick="sortTable2(1)" style = "cursor: pointer">Rating (stars)</th>
+                                <th onclick="sortTable2(1)" style = "cursor: pointer">Rooms Left</th>
                                 <th>Add to Trip</th>
                             </tr>
                             </thead>
