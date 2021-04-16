@@ -106,7 +106,7 @@ https://templatemo.com/tm-550-diagoona
                                         function loadingGif()
                                         {
                                             var dat = document.getElementById("flightTable").rows.length;
-					    if (dat > 1)
+					                       if (dat > 1)
                                             {
                                                 document.getElementById("loader").width = 0;
                                                 document.getElementById("loader").height = 0;
@@ -138,6 +138,11 @@ https://templatemo.com/tm-550-diagoona
                             <script src ="flight-hotel.js"></script>
                             </tbody>
                         </table>
+                         <a>Current Selection</a>
+                                <input type="text" id="hotelChoice1" value="" name="hotel1" size="25" readonly>
+                        <input type="hidden" id="hotelChoice" value="" name="hotelReal" size="0" readonly>
+                        <script src="selectHotel.js">
+                        </script>
                         <hr class="mb-5">
                    </section>
                </main>
