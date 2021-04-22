@@ -66,6 +66,7 @@ fetch(finalHotelDataURL, {
     var temp3;
     var temp4;
     var table = document.getElementById("hotelTable");
+   
     
     for(var n = 0; n < 5; n++){
         
@@ -74,11 +75,8 @@ fetch(finalHotelDataURL, {
         
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
-         temp3 = response.data.body.searchResults.results[n].starRating;
-        var radioButton = document.createElement("input");
-        radioButton.setAttribute("type", "radio");
-       
-        
+        temp3 = response.data.body.searchResults.results[n].starRating;
+      
         for(var l = 0; l < 5; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
@@ -94,7 +92,6 @@ fetch(finalHotelDataURL, {
         var cell4 = row.insertCell(3); 
         var cell5 = row.insertCell(4);
         
-        cell5.appendChild(radioButton);
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
@@ -102,6 +99,7 @@ fetch(finalHotelDataURL, {
       
         
     }
+ 
 })
 
 .catch(err => {
@@ -111,7 +109,5 @@ fetch(finalHotelDataURL, {
 .catch(err => {
 	console.error(err);
 });
-
-
 
 
