@@ -70,8 +70,8 @@ fetch(finalHotelDataURL, {
     
     for(var n = 0; n < 5; n++){
         
-        var finalGoogleURL = initGoogleURL.concat(response.data.body.searchResults.results[n].name);
         var googleHyperLinkLabel = "Book Here";
+        var finalGoogleURL = googleHyperLinkLabel.link(initGoogleURL.concat(response.data.body.searchResults.results[n].name));
         
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
@@ -96,6 +96,7 @@ fetch(finalHotelDataURL, {
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4;
+        cell5.innerHTML = finalGoogleURL;
       
         
     }
