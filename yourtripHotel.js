@@ -11,7 +11,7 @@ var split2 = hotelLink.split('"');
 console.log(split2);
 
 var hotelLinkF = split2[1];
-hotelLinkF.replace(' ', "%20");
+//hotelLinkF.replace(' ', "%20");
 console.log(hotelLinkF);
 
 document.getElementById("hotelCost").innerHTML = hotelCost;

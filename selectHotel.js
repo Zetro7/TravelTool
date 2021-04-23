@@ -20,7 +20,7 @@ document.getElementById('hotelTable').addEventListener('click', function(item){
     document.getElementById("hotelChoice").value = row_value;
     var presentValue = ""
     
-    link = row.cells[4].innerHTML;
+    link = row.cells[3].innerHTML;
     name = row.cells[0].innerHTML; 
     cost = row.cells[1].innerHTML;
     

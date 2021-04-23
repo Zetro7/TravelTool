@@ -96,13 +96,13 @@ fetch(finalHotelDataURL, {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3); 
-        var cell5 = row.insertCell(4);
+        //var cell5 = row.insertCell(4);
         
         cell1.innerHTML = temp1;
         cell2.innerHTML = temp2;
         cell3.innerHTML = temp3;
-        cell4.innerHTML = temp4;
-        cell5.innerHTML = finalGoogleURL;
+        cell4.innerHTML = finalGoogleURL;
+        //cell5.innerHTML = finalGoogleURL;
       
         document.getElementById("loader2").width = 0;
         document.getElementById("loader2").height = 0;

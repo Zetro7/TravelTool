@@ -10,11 +10,12 @@ var originSplit2 = originSplit1[1].split("%");
 var destSplit2 = destSplit1[1].split("%");
 var departSplit = splitData[3].split("&");
 var depart = departSplit[0];
-var returnDate = splitData[4];
+var returnDateSplit = splitData[4].split("&");
+var returnDate =returnDateSplit[0];
 console.log(returnDate);
 
-var urlOne = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60822a2145695c0519dce8db/"
-var urlRound = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/roundtrip/60822a2145695c0519dce8db/"
+var urlOne = "https://snowy-dream-918a.drake205.workers.dev?https://api.flightapi.io/onewaytrip/6082ccb545695c0519dce8dc/"
+var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545695c0519dce8dc/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
@@ -28,7 +29,7 @@ else{
     var urlfinal = urlOne.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
     console.log(urlfinal);
 }
-
+//https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545695c0519dce8dc/PIT/LAX/2021-05-03/2021-05-07&budget/1/0/0/Economy/USD
 //var urlfinal = url.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
 //"https://api.flightapi.io/onewaytrip/6049617d5ebe2705663733fd/PIT/LAX/2021-04-04/1/0/0/Economy/USD"
 console.log(urlfinal);
