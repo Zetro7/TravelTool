@@ -97,7 +97,12 @@ fetch(finalHotelDataURL, {
         cell3.innerHTML = temp3;
         cell4.innerHTML = temp4; 
         
+        
+        document.getElementById("loader2").width = 0;
+        document.getElementById("loader2").height = 0;
+
     }
+     
 })
 
 .catch(err => {
