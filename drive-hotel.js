@@ -19,7 +19,7 @@ var finalHotelLocationURL = hotelLocationURL.concat(dest).concat("&locale=en_US"
 
 if (finalHotelLocationURL.includes("undefined") == true)
 {
-	finalHotelLocationURL = finalHotelLocationURL.replace(finalHotelLocationURL, "undefined","");
+	finalHotelLocationURL = finalHotelLocationURL.replace("undefined","");
 }
     
 console.log(finalHotelLocationURL);
