@@ -21,6 +21,12 @@ console.log(dest);
 //console.log(cityOnly);
 var hotelLocationURL = "https://hotels4.p.rapidapi.com/locations/search?query=";
 var finalHotelLocationURL = hotelLocationURL.concat(dest).concat("&locale=en_US");
+
+if (finalHotelLocationURL.includes("undefined") == true)
+{
+	finalHotelLocationURL = finalHotelLocationURL.replace("undefined","");
+}
+
 console.log(finalHotelLocationURL);
 
 fetch(finalHotelLocationURL, {
