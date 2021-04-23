@@ -13,8 +13,8 @@ var depart = departSplit[0];
 var returnDate = splitData[4];
 console.log(returnDate);
 
-var urlOne = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/6078f04f5b6cbb4f6fcdfeb3/"
-var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6078f04f5b6cbb4f6fcdfeb3/"
+var urlOne = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/6078f04f5b6cbb4f6fcdfeb3/"
+var urlRound = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6078f04f5b6cbb4f6fcdfeb3/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];

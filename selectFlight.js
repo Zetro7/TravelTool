@@ -12,12 +12,19 @@ document.getElementById('flightTable').addEventListener('click', function(item){
   
     var row_value = "";
   
-    for (var j = 0; j < row.cells.length; j++) {
+    for (var j = 0; j < 2; j++) {
   
         row_value += row.cells[j].innerHTML;
         row_value += "|";
     }
+    var link = row.cells[2].innerHTML;
+    var airline = row.cells[0].innerHTML;
+    var cost = row.cells[1].innerHTML;
+    window.localStorage.setItem('flightLink', link);
+    window.localStorage.setItem('flightAirline', airline);
+    window.localStorage.setItem('flightCost', cost);
     document.getElementById("flightChoice").value = row_value;
+    
     var presentValue = ""
     
     for (var k = 0; k < 2; k++) {

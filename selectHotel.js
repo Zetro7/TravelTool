@@ -20,6 +20,14 @@ document.getElementById('hotelTable').addEventListener('click', function(item){
     document.getElementById("hotelChoice").value = row_value;
     var presentValue = ""
     
+    link = row.cells[4].innerHTML;
+    name = row.cells[0].innerHTML; 
+    cost = row.cells[1].innerHTML;
+    
+    window.localStorage.setItem('hotelLink', link);
+    window.localStorage.setItem('hotelName', name);
+    window.localStorage.setItem('hotelCost', cost);
+    
     for (var k = 0; k < 2; k++) {
   
         presentValue += row.cells[k].innerHTML;

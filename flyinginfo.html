@@ -99,7 +99,8 @@ https://templatemo.com/tm-550-diagoona
                                 </table>
                         <a>Current Selection</a>
                                 <input type="text" id="flightChoice1" value="" name="flight1" size="25" readonly>
-                        <input type="hidden" id="flightChoice" value="" name="flightReal" size="0" readonly>
+                        <form action="yourtrip.html" method="GET">
+                        <input type="hidden" id="flightChoice" value="" name="flightReal" size="0" readonly/>
                         <script src="selectFlight.js">
                         </script>
                                 <script>
@@ -142,6 +143,9 @@ https://templatemo.com/tm-550-diagoona
                         <input type="hidden" id="hotelChoice" value="" name="hotelReal" size="0" readonly>
                         <script src="selectHotel.js">
                         </script>
+                        <hr class="mb-5">
+                        <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
+                        </form>
                         <hr class="mb-5">
                    </section>
                </main>
