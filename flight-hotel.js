@@ -26,7 +26,7 @@ console.log(finalHotelLocationURL);
 fetch(finalHotelLocationURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "c0fc24bd79msh019f02987794e44p153e68jsncddddeab7434",
+		"x-rapidapi-key": "230d4fff2fmsh0f284624326d5e4p18b611jsnca7db181d472",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
@@ -51,7 +51,7 @@ destinationID + pageNumber=1(static) + checkIn + checkOut + pageSize=25(static) 
 fetch(finalHotelDataURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "c0fc24bd79msh019f02987794e44p153e68jsncddddeab7434",
+		"x-rapidapi-key": "230d4fff2fmsh0f284624326d5e4p18b611jsnca7db181d472",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
