@@ -104,7 +104,8 @@ fetch(finalHotelDataURL, {
         cell4.innerHTML = temp4;
         cell5.innerHTML = finalGoogleURL;
       
-        
+        document.getElementById("loader2").width = 0;
+        document.getElementById("loader2").height = 0;
     }
  
 })

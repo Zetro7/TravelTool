@@ -111,17 +111,33 @@ https://templatemo.com/tm-550-diagoona
             
                             </thead>
                             <tbody>
-                            <script src ="drive-hotel.js"></script>
+                            <script src ="drive-hotel.js"  onchange = "loadingGif2"></script>
                             </tbody>
                         </table>
                    <a>Current Selection</a>
                                 <input type="text" id="hotelChoice1" value="" name="hotel1" size="25" readonly>
                         <input type="hidden" id="hotelChoice" value="" name="hotelReal" size="0" readonly>
                     <form action="yourtrip.html">
+                       
+                        <img id= "loader2" src="BasicLoading.gif" width="100"/>
+                        <br>
+                        <br>
+                        <hr>
                     <input type="submit" value="Continue" class="btn btn-primary" style="background-color:cadetblue" />
                     </form>
                         <script src="selectHotel.js">
                         </script>
+                            <script>
+                                function loadingGif2()
+                                {
+                                    var dat = document.getElementById("hotelTable").rows.length;
+					                   if (dat > 1)
+                                        {
+                                            document.getElementById("loader2").width = 0;
+                                            document.getElementById("loader2").height = 0;
+                                        }
+                                }
+                                </script>
                         <hr class="mb-5">
                     
 
