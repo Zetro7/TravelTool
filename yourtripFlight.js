@@ -1,6 +1,4 @@
-var values = window.location.search;
 
-console.log(values);
 
 const link = localStorage.getItem('flightLink');
 const airline = localStorage.getItem('flightAirline');
@@ -18,5 +16,6 @@ console.log(flightLink);
 
 document.getElementById("flightPrice").innerHTML = flightCost;
 document.getElementById("flightAirline").innerHTML = airline;
+document.getElementById("flightLink").innerHTML = "Book Here";
 var a = document.getElementById("flightLink");
 a.href = flightLink;

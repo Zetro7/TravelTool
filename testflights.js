@@ -13,14 +13,14 @@ var depart = departSplit[0];
 var returnDate = splitData[4];
 console.log(returnDate);
 
-var urlOne = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/6078f04f5b6cbb4f6fcdfeb3/"
-var urlRound = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6078f04f5b6cbb4f6fcdfeb3/"
+var urlOne = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/onewaytrip/60822a2145695c0519dce8db/"
+var urlRound = "https://shy-river-a2c7.drake205.workers.dev/?https://api.flightapi.io/roundtrip/60822a2145695c0519dce8db/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
 var outbound = depart;
 
-if(returnDate != null){
+if(returnDate != null && returnDate != ""){
     var urlfinal = urlRound.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat("/".concat(returnDate.concat(urlex))))))));
     console.log(urlfinal);
 }

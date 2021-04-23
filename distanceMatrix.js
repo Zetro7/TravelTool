@@ -30,6 +30,14 @@ function callback(response, status){
         var driveCost = gasStops * 34.44;
         document.getElementById("gasStops").innerHTML = gasStops;
         document.getElementById("driveCost").innerHTML = driveCost;
+        
+        var timeH = "Driving Time*: " + duration;
+        var gasH = "Gas Stops*: " + gasStops;
+        var costH = "Cost*: $" + driveCost;
+        
+        window.localStorage.setItem('driveTime', timeH);
+        window.localStorage.setItem('gasStopsE', gasH);
+        window.localStorage.setItem('driveCostE', costH);
     }
 }
 //fname=Jacob&lname=Johnson&origin=Pittsburgh&destination=Miami&originAir=Pittsburgh%2C+PA+%28PIT%29&destAir=Miami%2C+FL+-+International+%28MIA%29

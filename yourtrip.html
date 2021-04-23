@@ -79,29 +79,56 @@ https://templatemo.com/tm-550-diagoona
                         <hr class="mb-5">
                     </section>
                     <h1>Your Trip Choices</h1>
+                    <b>Hotel Choice</b>
+                    <br>
                     <a id="hotelName">     </a>
                     <a id="hotelCost">     </a>
-                    <a id = "hotelLink">Book Here</a>
+                    <a id = "hotelLink"></a>
                     <script src ="yourtripHotel.js"></script>
+                    <button type="button" onclick="removeHotel()" class="btn btn-primary" style="background-color:cadetblue">Remove</button>
                         <hr class="mb-5">
+                    <b>Flight Choice</b>
+                    <br>
                     <a id="flightAirline">     </a>
                     <a id="flightPrice">     </a>
-                    <a id = "flightLink">Book Here</a>
+                    <a id = "flightLink"></a>
                     <script src ="yourtripFlight.js"></script>
+                    <button type="button" onclick="removeFlight()" class="btn btn-primary" style="background-color:cadetblue">Remove</button>
                     <hr class="mb-5">
-                    <table id ="driveChoiceTable">
-                            <thead>
-                            <tr>
-                                <th>Total amount of driving time</th>
-                                <th>Gas stops</th>
-                                <th>Estimated price</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <script src ="yourtripDrive.js"></script>
-                            </tbody>
-                        </table>
+                    <b>Driving Results</b>
+                    <b id="timeH"></b>
+                    <a id = "driveTime"></a>
+                    <br>
+                    <b id="gasH"></b>
+                    <a id = "gasStops"></a>
+                    <br>
+                    <b id="costH"></b>
+                    <a id = "driveCost"></a>
+                    <script src ="yourtripDrive.js"></script>
+                    <button type="button" onclick="removeDrive()" class="btn btn-primary" style="background-color:cadetblue">Remove</button>
+                    <script>
+                    function removeHotel(){
+                        localStorage.removeItem("hotelLink");
+                        localStorage.removeItem("hotelName");
+                        localStorage.removeItem("hotelCost");
+                        window.location.reload();
+                    }
+                    function removeFlight(){
+                            localStorage.removeItem("flightLink");
+                            localStorage.removeItem("flightAirline");
+                            localStorage.removeItem("flightCost");
+                            window.location.reload();
+                        }
+                    function removeDrive(){
+                            localStorage.removeItem("driveTime");
+                            localStorage.removeItem("gasStopsE");
+                            localStorage.removeItem("driveCostE");
+                            document.getElementById("timeH").innerHTML = "";
+                            document.getElementById("gasH").innerHTML = "";
+                            document.getElementById("costH").innerHTML = "";
+                            window.location.reload();
+                        }
+                    </script>
                 </main>
             </div>
         </div>        
