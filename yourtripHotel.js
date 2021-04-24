@@ -1,11 +1,13 @@
 const hotelLink = localStorage.getItem('hotelLink');
 const name = localStorage.getItem('hotelName');
 const hotelCost = localStorage.getItem('hotelCost');
+const totalHotelDays = localStorage.getItem('totalHotelDays');
 var initGoogleURL = "https://www.google.com/search?q=";
 
 console.log(hotelLink);
 console.log(name);
 console.log(hotelCost);
+console.log(totalHotelDays);
 
 var split2 = hotelLink.split('"');
 console.log(split2);
