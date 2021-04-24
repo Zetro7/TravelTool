@@ -116,7 +116,7 @@ https://templatemo.com/tm-550-diagoona
                                 var dCost = 0;
                             }
                             var tCost = fCost + hCost + dCost;
-                            var costString = "Current Cost: $" + tCost;
+                            var costString = "*Current Cost: $" + tCost;
                             document.getElementById("currCost").innerHTML = costString;
                             window.localStorage.setItem('costInt', tCost);
                         </script>
@@ -149,6 +149,7 @@ https://templatemo.com/tm-550-diagoona
                     <button type="button" onclick="removeFlight()" class="btn btn-primary" style="background-color:cadetblue">Remove</button>
                     <hr class="mb-5">
                     <b>Driving Results</b>
+                    <br>
                     <b id="timeH"></b>
                     <a id = "driveTime"></a>
                     <br>

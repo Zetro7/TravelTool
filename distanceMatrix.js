@@ -31,9 +31,9 @@ function callback(response, status){
         document.getElementById("gasStops").innerHTML = gasStops;
         document.getElementById("driveCost").innerHTML = driveCost;
         
-        var timeH = "Driving Time*: " + duration;
-        var gasH = "Gas Stops*: " + gasStops;
-        var costH = "Cost*: $" + driveCost;
+        var timeH = "*Driving Time: " + duration;
+        var gasH = "*Gas Stops: " + gasStops;
+        var costH = "*Cost: $" + driveCost;
         
         window.localStorage.setItem('driveTime', timeH);
         window.localStorage.setItem('gasStopsE', gasH);

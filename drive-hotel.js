@@ -7,6 +7,8 @@ var destSplit = splitNames[2].split("&");
 var departSplit = splitNames[3].split("&");
 var returnSplit = splitNames[4].split("&");
 var destHold = destSplit[0].split("+");
+var userBudget = splitNames[5];
+window.localStorage.setItem('budget', userBudget);
 
 //These variables are now user defined and sent to the API
 //https://hotels4.p.rapidapi.com/locations/search?query=new%20york&locale=en_US
