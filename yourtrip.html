@@ -74,8 +74,61 @@ https://templatemo.com/tm-550-diagoona
                 <main class="tm-col-right">
                     <section class="tm-content tm-about">
                         <h2 class="mb-5 tm-content-title">Your Trip</h2>
+                        <a id="header"></a>
                         <hr class="mb-4">
-                            <p>Here's everything you picked.</p>
+                            <a id="userBudget">Your Budget: </a>
+                            <a>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;</a>
+                            <a id="currCost">Current Cost:</a>
+                        <script>
+                            const budget = localStorage.getItem("budget");
+                            var budget1 = "Your Budget: $" + budget;
+                            document.getElementById("userBudget").innerHTML = budget1;
+                            var budgetI = parseInt(budget);
+                            window.localStorage.setItem('budgetInt', budgetI)
+                        </script>
+                        <script>
+                            const hotelString = localStorage.getItem('hotelCost');
+                            if(hotelString != null){
+                                var hotelString1 = hotelString.replace("$", "")
+                                var hCost = parseInt(hotelString1);
+                                console.log(hCost);
+                            }
+                            else{
+                                var hCost = 0;
+                            }
+                            const flightString = localStorage.getItem('flightCost');
+                            if(flightString != null){
+                                var flightString1 = flightString.replace("$", "")
+                                var fCost = parseInt(flightString1);
+                                console.log(fCost);
+                            }
+                            else{
+                                var fCost = 0;
+                            }
+                            const driveString = localStorage.getItem('driveCostE');
+                            console.log(driveString);
+                            if(driveString != null){
+                                var driveString1 = driveString.split("$");
+                                var dCost = parseInt(driveString1[1]);
+                                console.log(dCost);
+                            }
+                            else{
+                                var dCost = 0;
+                            }
+                            var tCost = fCost + hCost + dCost;
+                            var costString = "Current Cost: $" + tCost;
+                            document.getElementById("currCost").innerHTML = costString;
+                            window.localStorage.setItem('costInt', tCost);
+                        </script>
+                        <script>
+                            const budgetH = localStorage.getItem("budget");
+                            var budgetI = parseInt(budgetH);
+                            const costI = localStorage.getItem('costInt');
+                            if(costI > budgetI){
+                                console.log("Over Budget");
+                                document.getElementById("header").innerHTML = "YOU ARE CURRENTLY OVER BUDGET!";
+                            }
+                        </script>
                         <hr class="mb-5">
                     </section>
                     <h1>Your Trip Choices</h1>

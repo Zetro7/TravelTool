@@ -12,7 +12,10 @@ var departSplit = splitData[3].split("&");
 var depart = departSplit[0];
 var returnDateSplit = splitData[4].split("&");
 var returnDate =returnDateSplit[0];
+var userBudget = splitData[5];
 console.log(returnDate);
+
+window.localStorage.setItem('budget', userBudget);
 
 var urlOne = "https://snowy-dream-918a.drake205.workers.dev?https://api.flightapi.io/onewaytrip/6082ccb545695c0519dce8dc/"
 var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545695c0519dce8dc/"
