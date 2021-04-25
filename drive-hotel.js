@@ -36,6 +36,7 @@ totalDays = days/(1000 * 60 * 60 * 24);
 
 console.log(totalDays);
 console.log("test");
+console.log("please work");
 
 window.localStorage.setItem('amtOfDays', totalDays);
 
