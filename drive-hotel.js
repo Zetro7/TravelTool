@@ -32,9 +32,9 @@ var returnDay = new Date(returnDate);
 var departDay = new Date(departDate);
 
 var days = Math.abs(departDay - returnDay);
-totalDays = days/(1000 * 3600 * 24);
+totalDays = days/(1000 * 60 * 60 * 24);
 
-console.log(days);
+console.log(totalDays);
 
 window.localStorage.setItem('amtOfDays', days);
 
