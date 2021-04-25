@@ -13,8 +13,11 @@ body {
     overflow-x: hidden;
     color: white;
     background-color: #2C353C;
+    overflow:auto;
 }
-
+#target {
+    overflow:auto;
+}
 a { 
     transition: all 0.3s ease; 
     text-decoration: none;
@@ -337,6 +340,11 @@ textarea {
     .tm-service-text { margin-top: 20px; }
     .tm-service-img { margin-right: 0; }
     .tm-service-img-r { margin-left: 0; }
+}
+@media screen and (max-width:900px){
+    body{
+    overflow: auto;
+    }
 }
 
 td {border: 1px #DDD solid; padding: 5px; cursor: pointer;}
