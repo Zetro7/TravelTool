@@ -78,19 +78,36 @@ fetch(finalHotelDataURL, {
 .then(response => {
 	console.log(response);
     var hotelCount = response.data.body.searchResults.results.length;
-    for(k = 0; k < hotelCount/10; k++)
+    for(k = 0; k < hotelCount/4; k++)
     {
         console.log(response.data.body.searchResults.results[k]);
     }
-    
+	
+
+    /*var tempend1_1;
+    var tempend1_2;
+    var tempend1_3;
+    var tempend2_1;
+    var tempend2_2;
+    var tempend2_3;
+    var tempend3_1;
+    var tempend3_2;
+    var tempend3_3;
+    var tempend4_1;
+    var tempend4_2;
+    var tempend4_3;*/
+
     var temp1;
     var temp2;
     var temp3;
     var temp4;
+    var temp1_1;
+    var temp1_2;
+    var temp1_3;
     var table = document.getElementById("hotelTable");
    
     
-    for(var n = 0; n < 5; n++){
+    for(var n = 0; n < 4; n++){
         
         var googleHyperLinkLabel = "Book Here";
         var finalGoogleURL = googleHyperLinkLabel.link(initGoogleURL.concat(response.data.body.searchResults.results[n].name));
@@ -98,7 +115,30 @@ fetch(finalHotelDataURL, {
         temp1 = response.data.body.searchResults.results[n].name;
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
         temp3 = response.data.body.searchResults.results[n].starRating;
-      
+	 
+	for(var x = hotelCount; x > hotelCount - 4; x--){
+		temp1_1 = response.data.body.searchResults.results[x].name;
+		temp1_2 = response.data.body.searchResults.results[x].ratePlan.price.current;
+		temp1_3 = response.data.body.searchResults.results[x].starRating;
+	
+	}
+      	
+	/*tempend1_1 = response.data.body.searchResults.results[hotelCount].name;
+	tempend1_2 = response.data.body.searchResults.results[hotelCount].ratePlan.price.current;
+	tempend1_3 = response.data.body.searchResults.results[hotelCount].starRating;
+	
+	tempend2_1 = response.data.body.searchResults.results[hotelCount-1].name;
+	tempend2_2 = response.data.body.searchResults.results[hotelCount-1].ratePlan.price.current;
+	tempend2_3 = response.data.body.searchResults.results[hotelCount-1].starRating;
+	
+	tempend3_1 = response.data.body.searchResults.results[hotelCount-2].name;
+	tempend3_2 = response.data.body.searchResults.results[hotelCount-2].ratePlan.price.current;
+	tempend3_3 = response.data.body.searchResults.results[hotelCount-2].starRating;
+	
+	tempend4_1 = response.data.body.searchResults.results[hotelCount-3].name;
+	tempend4_2 = response.data.body.searchResults.results[hotelCount-3].ratePlan.price.current;
+	tempend4_3 = response.data.body.searchResults.results[hotelCount-3].starRating;*/
+	 
         for(var l = 0; l < 5; l++)
         {
             temp4 = response.data.body.searchResults.results[n].roomsLeft;
@@ -112,11 +152,10 @@ fetch(finalHotelDataURL, {
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3); 
-        //var cell5 = row.insertCell(4);
         
-        cell1.innerHTML = temp1;
-        cell2.innerHTML = temp2;
-        cell3.innerHTML = temp3;
+        cell1.innerHTML = temp1, temp1_1;
+        cell2.innerHTML = temp2, temp1_2;
+        cell3.innerHTML = temp3, temp1_3;
         cell4.innerHTML = finalGoogleURL;
         //cell5.innerHTML = finalGoogleURL;
       
