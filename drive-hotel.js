@@ -120,6 +120,7 @@ fetch(finalHotelDataURL, {
 		temp1_1 = response.data.body.searchResults.results[x].name;
 		temp1_2 = response.data.body.searchResults.results[x].ratePlan.price.current;
 		temp1_3 = response.data.body.searchResults.results[x].starRating;
+		console.log(temp1_1);
 	
 	}
       	
