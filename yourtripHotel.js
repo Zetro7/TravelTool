@@ -16,6 +16,7 @@ var hotelLinkF = split2[1];
 //hotelLinkF.replace(' ', "%20");
 console.log(hotelLinkF);
 
+document.getElementById("hotelDays").innerHTML = totalHotelDays;
 document.getElementById("hotelCost").innerHTML = hotelCost + " Per Night.";
 document.getElementById("hotelName").innerHTML = name;
 document.getElementById("hotelLink").innerHTML = "Book Here";
