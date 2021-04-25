@@ -15,8 +15,12 @@ console.log(split2);
 var hotelLinkF = split2[1];
 //hotelLinkF.replace(' ', "%20");
 console.log(hotelLinkF);
-
-document.getElementById("hotelDays").innerHTML = "for " +totalHotelDays+ " nights at ";
+if(totalHotelDays > 1){
+    document.getElementById("hotelDays").innerHTML = "for " +totalHotelDays+ " nights at ";
+}
+else{
+    document.getElementById("hotelDays").innerHTML = "";
+}
 document.getElementById("hotelCost").innerHTML = hotelCost + " Per Night.";
 document.getElementById("hotelName").innerHTML = name;
 document.getElementById("hotelLink").innerHTML = "Book Here";

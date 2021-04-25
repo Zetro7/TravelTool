@@ -31,6 +31,8 @@ if(returnDate != null && returnDate != ""){
 else{
     var urlfinal = urlOne.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
     console.log(urlfinal);
+    
+    window.localStorage.setItem('amtOfDays', 1);
 }
 //https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545695c0519dce8dc/PIT/LAX/2021-05-03/2021-05-07&budget/1/0/0/Economy/USD
 //var urlfinal = url.concat(origin.concat("/".concat(dest.concat("/".concat(outbound.concat(urlex))))));
