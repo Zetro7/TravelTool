@@ -1,7 +1,7 @@
 const hotelLink = localStorage.getItem('hotelLink');
 const name = localStorage.getItem('hotelName');
 const hotelCost = localStorage.getItem('hotelCost');
-const totalHotelDays = localStorage.getItem('totalHotelDays');
+const totalHotelDays = localStorage.getItem('amtOfDays');
 var initGoogleURL = "https://www.google.com/search?q=";
 
 console.log(hotelLink);
@@ -16,7 +16,7 @@ var hotelLinkF = split2[1];
 //hotelLinkF.replace(' ', "%20");
 console.log(hotelLinkF);
 
-document.getElementById("hotelCost").innerHTML = hotelCost + " Per Night";
+document.getElementById("hotelCost").innerHTML = hotelCost * totalHotelDays + " Per Night";
 document.getElementById("hotelName").innerHTML = name;
 document.getElementById("hotelLink").innerHTML = "Book Here";
 var a = document.getElementById("hotelLink");
