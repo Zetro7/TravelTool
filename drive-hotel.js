@@ -36,7 +36,7 @@ totalDays = days/(1000 * 60 * 60 * 24);
 
 console.log(totalDays);
 
-window.localStorage.setItem('amtOfDays', days);
+window.localStorage.setItem('amtOfDays', totalDays);
 
 fetch(finalHotelLocationURL, {
 	"method": "GET",
