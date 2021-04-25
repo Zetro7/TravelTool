@@ -116,7 +116,7 @@ fetch(finalHotelDataURL, {
         temp2 = response.data.body.searchResults.results[n].ratePlan.price.current;
         temp3 = response.data.body.searchResults.results[n].starRating;
 	 
-	for(var x = hotelCount; x > hotelCount - 4; x--){
+	for(var x = hotelCount; x < hotelCount - 4; x--){
 		temp1_1 = response.data.body.searchResults.results[x].name;
 		temp1_2 = response.data.body.searchResults.results[x].ratePlan.price.current;
 		temp1_3 = response.data.body.searchResults.results[x].starRating;
