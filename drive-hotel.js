@@ -35,6 +35,7 @@ var days = Math.abs(departDay - returnDay);
 totalDays = days/(1000 * 60 * 60 * 24);
 
 console.log(totalDays);
+console.log("test");
 
 window.localStorage.setItem('amtOfDays', totalDays);
 
