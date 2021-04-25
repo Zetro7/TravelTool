@@ -25,6 +25,18 @@ if (finalHotelLocationURL.includes("undefined") == true)
 }
     
 console.log(finalHotelLocationURL);
+console.log(departDate);
+console.log(returnDate);
+
+var returnDay = new Date(returnDate);
+var departDay = new Date(departDate);
+
+var days = Math.abs(departDay - returnDay);
+totalDays = days/(1000 * 3600 * 24);
+
+console.log(days);
+
+window.localStorage.setItem('amtOfDays', days);
 
 fetch(finalHotelLocationURL, {
 	"method": "GET",
@@ -119,5 +131,3 @@ fetch(finalHotelDataURL, {
 .catch(err => {
 	console.error(err);
 });
-
-
