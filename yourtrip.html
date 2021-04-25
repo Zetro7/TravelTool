@@ -88,9 +88,10 @@ https://templatemo.com/tm-550-diagoona
                         </script>
                         <script>
                             const hotelString = localStorage.getItem('hotelCost');
+                            const hotelDaysString = localStorage.getItem('amtOfDays');
                             if(hotelString != null){
                                 var hotelString1 = hotelString.replace("$", "")
-                                var hCost = parseInt(hotelString1);
+                                var hCost = parseInt(hotelString1) * parseInt(hotelDaysString1);
                                 console.log(hCost);
                             }
                             else{
