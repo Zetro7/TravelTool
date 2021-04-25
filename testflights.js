@@ -18,7 +18,7 @@ console.log(returnDate);
 window.localStorage.setItem('budget', userBudget);
 
 var urlOne = "https://snowy-dream-918a.drake205.workers.dev?https://api.flightapi.io/onewaytrip/6082ccb545695c0519dce8dc/"
-var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545690519dce8dc/"
+var urlRound = "https://snowy-dream-918a.drake205.workers.dev/?https://api.flightapi.io/roundtrip/6082ccb545695c0519dce8dc/"
 var urlex = "/1/0/0/Economy/USD"
 var origin = originSplit2[0];
 var dest = destSplit2[0];
