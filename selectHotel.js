@@ -24,6 +24,12 @@ document.getElementById('hotelTable').addEventListener('click', function(item){
     name = row.cells[0].innerHTML; 
     cost = row.cells[1].innerHTML;
     
+    if (name.includes("&amp;") == true)
+    {
+	   name = name.replace("&amp;","&");
+    }
+    
+    
     window.localStorage.setItem('hotelLink', link);
     window.localStorage.setItem('hotelName', name);
     window.localStorage.setItem('hotelCost', cost);
