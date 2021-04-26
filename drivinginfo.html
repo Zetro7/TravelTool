@@ -89,7 +89,10 @@ https://templatemo.com/tm-550-diagoona
                             <h2 class="mb-6 tm-content-title">Hotel Information</h2>
                             Check-In Date:
 			    <br>
-                            <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart"><br>
+                            <form action = "/update" method = "post" autocomplete = "on">
+                            <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart" autocomplete = "off"><br>
+                            
+                                
                             Check-Out Date:
 			    <br>
                             <input type = "date" id= "return" onclick = "getmin()" onchange = "finished()" name="return" disabled>
@@ -141,7 +144,7 @@ https://templatemo.com/tm-550-diagoona
                         <hr class="mb-3">
                         <input type="submit" id="nextButton" value="Continue" class="btn btn-primary" disabled="true" style="background-color:cadetblue" />
                         </form>
-			    
+                        </form>
                         <br>
                    </section>
                </main>

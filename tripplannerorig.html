@@ -691,7 +691,9 @@ https://templatemo.com/tm-550-diagoona
                             <br>              
                             Departure Date:
 			    <br>
-                            <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart"><br>
+                            <form action = "/update" method = "post" autocomplete = "on">
+                            <input type = "date" id= "depart" onclick = "getToday()" onchange = "getmin()" name="depart" autocomplete  = "off" ><br>                        
+
                             Return Date:
 			    <br>
                             <input type = "date" id= "return" onclick = "getmin()" name="return" disabled>
@@ -715,6 +717,8 @@ https://templatemo.com/tm-550-diagoona
                                     today = yyyy+'-'+mm+'-'+dd;
                                     document.getElementById("depart").setAttribute("min", today);
                                     document.getElementById("depart").setAttribute("max", rt);
+                                    
+                                          
                                 }
                             </script>
                             <script>
@@ -734,19 +738,20 @@ https://templatemo.com/tm-550-diagoona
                                     button.disabled=false;
                                 }
                             </script>
+                                <br>
 			<a>Enter Budget: $</a>
                         <input type="text" id="userBudget" value="" name="budget" size="5">
                         <hr class="mb-5">
                             <hr class="mb-3">
                         <input id="nextButton" type="submit" value="Continue" class="btn btn-primary" disabled="true" style="background-color:cadetblue" />
                         </form>
-			    
+                        </form>
                         <br>
                    </section>
                </main>
            </div>
         </div>
-        
+
         <div class="tm-row">
             <div class="tm-col-left text-center">            
                 <ul class="tm-bg-controls-wrapper">
