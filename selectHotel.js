@@ -25,6 +25,7 @@ document.getElementById('hotelTable').addEventListener('click', function(item){
     cost = row.cells[1].innerHTML;
     
     console.log(name);
+    console.log(cost);
 	
     if (name.includes("&amp;") == true)
     {
