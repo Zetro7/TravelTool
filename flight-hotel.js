@@ -16,6 +16,7 @@ var origin = originSplit[0];
 var dest = destHold[0].concat("%20".concat(destHold[1]));
 var departDate = departSplit[0];
 var returnDate = returnSplit[0];
+console.log(returnDate);
 console.log(dest);
 //var cityOnly = cityOnlySplit[0];
 //console.log(cityOnly);
@@ -28,6 +29,23 @@ if (finalHotelLocationURL.includes("undefined") == true)
 }
 
 console.log(finalHotelLocationURL);
+
+if(returnDate != ""){
+    var returnDay = new Date(returnDate);
+    var departDay = new Date(departDate);
+
+    var days = Math.abs(departDay - returnDay);
+    totalDays = days/(1000 * 60 * 60 * 24);
+
+    console.log(totalDays);
+    console.log("test");
+    console.log("please work");
+
+    window.localStorage.setItem('amtOfDays', totalDays);
+}
+else{
+    window.localStorage.setItem('amtOfDays', 1);
+}
 
 fetch(finalHotelLocationURL, {
 	"method": "GET",
