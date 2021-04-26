@@ -43,7 +43,7 @@ window.localStorage.setItem('amtOfDays', totalDays);
 fetch(finalHotelLocationURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "230d4fff2fmsh0f284624326d5e4p18b611jsnca7db181d472",
+		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
@@ -68,7 +68,7 @@ destinationID + pageNumber=1(static) + checkIn + checkOut + pageSize=25(static) 
 fetch(finalHotelDataURL, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "230d4fff2fmsh0f284624326d5e4p18b611jsnca7db181d472",
+		"x-rapidapi-key": "eee204e8b3msh0f6a1cc96c72584p13af77jsnad25c961126a",
 		"x-rapidapi-host": "hotels4.p.rapidapi.com"
 	}
 })
