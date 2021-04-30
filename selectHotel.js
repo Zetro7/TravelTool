@@ -34,6 +34,7 @@ document.getElementById('hotelTable').addEventListener('click', function(item){
         presentValue += " ";
     }
     document.getElementById("hotelChoice1").value = presentValue;
+    console.log("nice");
     //if (row.classList.contains('highlight'))
     //    row.classList.remove('highlight');
     //else
